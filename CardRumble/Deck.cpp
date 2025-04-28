@@ -27,3 +27,10 @@ void Deck::Shuffle()
 	std::mt19937 g(rd());
 	std::shuffle(_cards.begin(), _cards.end(), g);
 }
+
+Card Deck::GetFirstCard()
+{
+	Card card = _cards[_cards.size() - 1];
+	_cards.pop_back();
+	return card;
+}

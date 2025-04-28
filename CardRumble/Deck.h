@@ -14,5 +14,6 @@ class Deck
 		Deck(std::string fileName);
 
 		void Shuffle();
+		Card GetFirstCard();
 };
 
