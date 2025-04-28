@@ -19,7 +19,6 @@ Deck::Deck(std::string fileName)
 	json in = json::parse(file);
 
 	for (auto& el : in["deck"].items()) _cards.push_back(Card(el.value()));
-	for (Card c : _cards) c.PrintCard();
 }
 
 void Deck::Shuffle()

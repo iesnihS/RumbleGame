@@ -6,6 +6,8 @@ Deck deckReference;
 
 int main()
 {
+	Card::InitAllPossibleCards();
+
 	srand(time(NULL));
 	deckP1 = Deck();
 	deckReference = Deck("reference_player.json");
