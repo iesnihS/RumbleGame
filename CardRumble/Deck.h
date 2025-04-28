@@ -8,5 +8,6 @@ class Deck
 		std::vector<Card> _cards;
 		Deck();
 		void Shuffle();
+		Card GetFirstCard();
 };
 
