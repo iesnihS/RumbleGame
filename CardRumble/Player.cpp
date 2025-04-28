@@ -1,15 +1,17 @@
 #include "Player.h"
 #include <stdexcept>
 
-Player::Player(Deck* deck, std::string name)
-{
-	_deck = deck;
-	_name = name;
-}
+Player::Player(Deck* deck, std::string name) : _deck(deck), _name(name) {}
 
-void Player::Draw()
+Player::Player(std::string name) : _name(name) { _deck = nullptr; }
+
+void Player::SetDeck(Deck* deck) { _deck = deck; }
+
+bool Player::Draw()
 {
+	if (_deck->_cards.empty()) return false;
 	_hand.push_back(_deck->GetFirstCard());
+	return true;
 }
 
 void Player::PlayBestCard()
@@ -30,7 +32,7 @@ void Player::PlayBestCard()
 
 	}
 
-	if (index < 0)return;
+	if (index < 0) return;
 	PlayCard(index);
 	if (_currentMana > 0)
 		PlayBestCard();
