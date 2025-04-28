@@ -1,0 +1,8 @@
+# ninja log v6
+8	183	7675520000258889	src/CMakeFiles/nodesoup.dir/algebra.cpp.obj	591f0f9eaeb63f2e
+20	193	7675520000380644	src/CMakeFiles/nodesoup.dir/layout.cpp.obj	644f3874452269a8
+23	245	7675520000408815	src/CMakeFiles/nodesoup.dir/nodesoup.cpp.obj	dc216812637852b5
+16	247	7675520000343754	src/CMakeFiles/nodesoup.dir/kamada_kawai.cpp.obj	3bdf41a7edf15451
+12	377	7675520000309331	src/CMakeFiles/nodesoup.dir/fruchterman_reingold.cpp.obj	daf5b9ca964b1d34
+377	419	7675520003953986	src/nodesoup.lib	84e707b5805517d6
+419	504	7675520004375744	CMakeFiles/install.util	7ad65c0090664d24

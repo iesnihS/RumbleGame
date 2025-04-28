@@ -1,0 +1,26 @@
+Change Dir: 'C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/blds/cimg/x64-windows-rel'
+
+Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022-17.12.2/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v -v -j17 install
+[0/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\artal\Documents\Visual Studio 2022\RumbleGame\CardRumble\vcpkg_installed\vcpkg\blds\cimg\x64-windows-rel" && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+-- Install configuration: "Release"
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/share/cimg/CImgConfig.cmake
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/CImg.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/add_fileformat.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/bayer.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/chlpca.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/cvMat.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/draw_gradient.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/inpaint.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/ipl.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/ipl_alt.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/jpeg_buffer.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/loop_macros.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/matlab.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/nlmeans.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/skeleton.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/tiff_stream.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/tinymatwriter.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/vrml.h
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/cimg_x64-windows/include/plugins/vtk.h
+

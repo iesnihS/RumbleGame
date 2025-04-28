@@ -3,7 +3,6 @@
 
 Player::Player(Deck deck, std::string name) : _deck(deck), _name(name) {}
 
-
 void Player::SetDeck(Deck deck) { _deck = deck; }
 
 bool Player::Draw()

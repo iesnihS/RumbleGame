@@ -1,0 +1,7 @@
+Package: nodesoup
+Version: 2023-06-12
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 2786092b033523e92de979ca3f3a5bd24094bbf6f49cca5c20601e08dd36a314
+Description: Force-directed graph layout with Fruchterman-Reingold
