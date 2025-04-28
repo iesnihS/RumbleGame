@@ -7,9 +7,11 @@ Player::Player(Deck* deck, std::string name)
 	_name = name;
 }
 
-void Player::Draw()
+bool Player::Draw()
 {
+	if (_deck->_cards.empty()) return false;
 	_hand.push_back(_deck->GetFirstCard());
+	return true;
 }
 
 void Player::PlayBestCard()
@@ -37,6 +39,8 @@ void Player::PlayBestCard()
 }
 void Player::PlayCard(uint32_t iHand)
 {
+	if (iHand < 0) return;
+
 	Card card = _hand.at(iHand);
 	if (card._manaCost > _currentMana)
 		throw std::invalid_argument("Error with mana value");

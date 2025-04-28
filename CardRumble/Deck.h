@@ -15,5 +15,6 @@ class Deck
 
 		void Shuffle();
 		Card GetFirstCard();
+		bool IsEmpty();
 };
 

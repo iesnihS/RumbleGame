@@ -4,7 +4,22 @@
 Deck deckP1;
 Deck deckReference;
 
-
+bool PlayerTurn(Player* firstPlayer, Player* secondPlayer)
+{
+	if (!firstPlayer->Draw())
+	{
+		std::cout << firstPlayer->_name + " Win !";
+		return true;
+	}
+	firstPlayer->PlayBestCard();
+	firstPlayer->AttackPlayer(secondPlayer);
+	if (secondPlayer->_pv <= 0)
+	{
+		std::cout << firstPlayer->_name + " Win !";
+		return true;
+	}
+	return false;
+}
 
 int main()
 {
@@ -34,19 +49,4 @@ int main()
 		if (PlayerTurn(&secondPlayer, &firstPlayer))
 			break;
 	}
-
-
-}
-
-bool PlayerTurn(Player* firstPlayer, Player* secondPlayer)
-{
-	firstPlayer->Draw();
-	firstPlayer->PlayBestCard();
-	firstPlayer->AttackPlayer(secondPlayer);
-	if (secondPlayer->_pv <= 0)
-	{
-		std::cout << firstPlayer->_name + " Win !";
-		return true;
-	}
-	return false;
 }
