@@ -17,5 +17,7 @@ class Card
 		Card(json source);
 
 		static void InitAllPossibleCards();
+
+		void PrintCard();
 };
 

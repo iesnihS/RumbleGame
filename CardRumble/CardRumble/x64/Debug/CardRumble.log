@@ -1,4 +1,4 @@
 ﻿  Card.cpp
-C:\Users\artal\Documents\Visual Studio 2022\RumbleGame\CardRumble\Card.cpp(29,18): warning C4244: '=' : conversion de 'double' en 'uint32_t', perte possible de données
-C:\Users\artal\Documents\Visual Studio 2022\RumbleGame\CardRumble\Card.cpp(38,18): warning C4244: '=' : conversion de 'double' en 'uint32_t', perte possible de données
+C:\Users\artal\Documents\Visual Studio 2022\RumbleGame\CardRumble\Card.cpp(36,18): warning C4244: '=' : conversion de 'double' en 'uint32_t', perte possible de données
+C:\Users\artal\Documents\Visual Studio 2022\RumbleGame\CardRumble\Card.cpp(45,18): warning C4244: '=' : conversion de 'double' en 'uint32_t', perte possible de données
   CardRumble.vcxproj -> C:\Users\artal\Documents\Visual Studio 2022\RumbleGame\CardRumble\x64\Debug\CardRumble.exe
