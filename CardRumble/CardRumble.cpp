@@ -8,7 +8,7 @@ int main()
 {
 	srand(time(NULL));
 	deckP1 = Deck();
-	deckReference = Deck();
+	deckReference = Deck("reference_player.json");
 
 	Player firstPlayer;
 	Player secondPlayer;

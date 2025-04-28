@@ -1,6 +1,9 @@
 #pragma once
 #include <stdint.h>
 #include <string>
+#include "./single_include/nlohmann/json.hpp"
+using json = nlohmann::json;
+
 class Card
 {
 	public:
@@ -11,6 +14,8 @@ class Card
 		std::string _name;
 
 		Card();
+		Card(json source);
+
 		static void InitAllPossibleCards();
 };
 
