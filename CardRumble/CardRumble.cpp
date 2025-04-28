@@ -1,7 +1,6 @@
 #include <iostream>
 #include <sstream>
 #include "Player.h"
-
 constexpr uint32_t NB_GAMES_PER_PASS = 500;
 
 Deck deckP1;
@@ -87,6 +86,11 @@ static void OptiPass()
 	std::cout << oss.str() << std::endl;
 }
 
+static void DrawTrace()
+{
+
+}
+
 int main()
 {
 	Card::InitAllPossibleCards();
@@ -95,4 +99,6 @@ int main()
 	srand(time(NULL));
 
 	OptiPass();
+
+
 }

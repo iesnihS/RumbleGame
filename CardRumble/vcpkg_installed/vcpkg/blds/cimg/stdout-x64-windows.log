@@ -1,0 +1,8 @@
+Downloading dtschump-CImg-v.3.4.1.tar.gz
+Successfully downloaded dtschump-CImg-v.3.4.1.tar.gz.
+-- Extracting source C:/Users/artal/AppData/Local/vcpkg/downloads/dtschump-CImg-v.3.4.1.tar.gz
+-- Using source at C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/blds/cimg/src/v.3.4.1-59ea721497.clean
+-- Found external ninja('1.12.1').
+-- Configuring x64-windows
+-- Building x64-windows-rel
+-- Exécution de la validation post-build

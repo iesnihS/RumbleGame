@@ -1,0 +1,41 @@
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 044b931641e180b63092bced3da87b6af082be07b0cfe5bdf5ec832c3ee010ba
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 3f3a70e0f8a3a47698614f5f8eb7d9386d520dc0ecb3fc904a5d80a16fef365e
+Status: install ok installed
+
+Package: nodesoup
+Version: 2023-06-12
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 2786092b033523e92de979ca3f3a5bd24094bbf6f49cca5c20601e08dd36a314
+Description: Force-directed graph layout with Fruchterman-Reingold
+Status: install ok installed
+
+Package: cimg
+Version: 3.4.1
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 73b2bf06c36745b76d844c1f203107097048a06e623cdad3c51ab5778feb6dd7
+Description: The CImg Library is a small, open-source, and modern C++ toolkit for image processing
+Status: install ok installed
+
+Package: matplotplusplus
+Version: 1.2.1
+Depends: cimg, nodesoup, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8cc796d03bfdf42ba4a3b63156c86cc78b52fb455cf8e00151ae4926af7b7df2
+Description: A C++ graphics library for data visualization
+Status: install ok installed
+

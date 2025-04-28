@@ -18,6 +18,6 @@ class Card
 
 		static void InitAllPossibleCards();
 
-		void PrintCard();
+		void PrintCard() const;
 };
 

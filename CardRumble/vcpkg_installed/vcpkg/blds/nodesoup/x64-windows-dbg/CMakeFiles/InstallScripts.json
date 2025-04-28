@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/blds/nodesoup/x64-windows-dbg/cmake_install.cmake",
+		"C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/blds/nodesoup/x64-windows-dbg/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

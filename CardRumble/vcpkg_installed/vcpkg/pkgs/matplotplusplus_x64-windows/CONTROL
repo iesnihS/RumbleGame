@@ -1,0 +1,7 @@
+Package: matplotplusplus
+Version: 1.2.1
+Depends: cimg, nodesoup, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8cc796d03bfdf42ba4a3b63156c86cc78b52fb455cf8e00151ae4926af7b7df2
+Description: A C++ graphics library for data visualization

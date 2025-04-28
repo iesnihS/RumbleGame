@@ -3,7 +3,7 @@
 
 Player::Player(Deck* deck, std::string name) : _deck(deck), _name(name) {}
 
-Player::Player(std::string name) : _name(name) { _deck = nullptr; }
+Player::Player(std::string name) : _name(name), _deck(nullptr) {}
 
 void Player::SetDeck(Deck* deck) { _deck = deck; }
 

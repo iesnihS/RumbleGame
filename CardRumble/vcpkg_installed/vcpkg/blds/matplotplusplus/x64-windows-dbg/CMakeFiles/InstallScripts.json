@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/blds/matplotplusplus/x64-windows-dbg/cmake_install.cmake",
+		"C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/blds/matplotplusplus/x64-windows-dbg/source/cmake_install.cmake",
+		"C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/blds/matplotplusplus/x64-windows-dbg/source/3rd_party/cmake_install.cmake",
+		"C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/blds/matplotplusplus/x64-windows-dbg/source/matplot/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

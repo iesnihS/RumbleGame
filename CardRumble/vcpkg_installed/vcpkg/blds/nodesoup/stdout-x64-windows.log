@@ -1,0 +1,13 @@
+-- Note: nodesoup only supports static library linkage. Building static library.
+Downloading olvb-nodesoup-3158ad082bb0cd1abee75418b12b35522dbca74f.tar.gz
+Successfully downloaded olvb-nodesoup-3158ad082bb0cd1abee75418b12b35522dbca74f.tar.gz.
+-- Extracting source C:/Users/artal/AppData/Local/vcpkg/downloads/olvb-nodesoup-3158ad082bb0cd1abee75418b12b35522dbca74f.tar.gz
+-- Applying patch fix-cmakelists.patch
+-- Using source at C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/blds/nodesoup/src/522dbca74f-4565ebbae7.clean
+-- Found external ninja('1.12.1').
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/nodesoup_x64-windows/share/nodesoup//copyright
+-- Installing: C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/nodesoup_x64-windows/share/nodesoup//usage
+-- Exécution de la validation post-build

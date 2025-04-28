@@ -1,0 +1,4 @@
+C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/nodesoup_x64-windows/debug/lib/nodesoup.lib
+C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/nodesoup_x64-windows/debug/include/nodesoup.hpp
+C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/nodesoup_x64-windows/debug/lib/cmake/nodesoup/nodesoup-config.cmake
+C:/Users/artal/Documents/Visual Studio 2022/RumbleGame/CardRumble/vcpkg_installed/vcpkg/pkgs/nodesoup_x64-windows/debug/lib/cmake/nodesoup/nodesoup-config-debug.cmake

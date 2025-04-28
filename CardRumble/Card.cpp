@@ -4,6 +4,7 @@
 #include <sstream>
 #include <fstream>
 
+
 uint32_t Card::_maxCost = 6;
 
 void Card::InitAllPossibleCards()
@@ -50,7 +51,7 @@ Card::Card(json source)
 	_manaCost = ceil((_atk + _def) / 2);
 }
 
-void Card::PrintCard()
+void Card::PrintCard() const
 {
 	std::ostringstream oss;
 	oss << _name << " | " << _atk << " ATK | " << _def << " DEF";
