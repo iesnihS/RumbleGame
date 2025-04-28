@@ -100,6 +100,9 @@ void OptiPass()
 	oss << "Winrate " << p1->_name << " = " << res1 * 100 << "% " << " | Winrate "
 		<< p2->_name << " = " << res2 * 100 << "% ";
 	std::cout << oss.str() << std::endl;
+
+
+	deckP1.SaveDeckToJson("Fromage", res1);
 }
 
 static void DrawTrace()

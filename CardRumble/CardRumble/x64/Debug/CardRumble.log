@@ -1,3 +1,2 @@
-﻿  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\artal\Documents\Visual Studio 2022\RumbleGame\CardRumble\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
-  Visualiser.cpp
-  CardRumble.vcxproj -> C:\Users\artal\Documents\Visual Studio 2022\RumbleGame\CardRumble\x64\Debug\CardRumble.exe
+﻿  Deck.cpp
+  CardRumble.vcxproj -> C:\Users\fullc\Desktop\Projects\RumbleGame\CardRumble\x64\Debug\CardRumble.exe

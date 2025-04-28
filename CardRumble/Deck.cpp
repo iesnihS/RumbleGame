@@ -36,15 +36,25 @@ Card Deck::GetFirstCard()
 	return card;
 }
 
-void Deck::SaveDeckToJson(std::string name)
+void Deck::SaveDeckToJson(std::string name, float winRate)
 {
 	std::ostringstream jsonName;
 	jsonName << name << ".json";
-	// Check if exists.
-	std::ifstream check(jsonName.str());
-	if (check.good()) return;
-
-	// If not : generate.
-	std::ofstream tempFile{ jsonName.str()};
-	json assetList;
+	std::ofstream tempFile{ jsonName.str() };
+	json deck;
+	json cards;
+	for(uint32_t i = 0; i < _cards.size(); i++)
+	{
+		json jCard;
+		Card& card = _cards[i];
+		jCard["name"] = card._name;
+		jCard["atk"] = card._atk;
+		jCard["def"] = card._def;
+		cards.emplace_back(jCard);
+	}
+	json winJ;
+	winJ["WinRate"] = winRate;
+	deck.push_back(winJ);
+	deck.emplace_back(cards);
+	tempFile << deck;
 }
