@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <random>
 #include "./single_include/nlohmann/json.hpp"
+#include <sstream>
 using json = nlohmann::json;
 
 Deck::Deck()
@@ -33,4 +34,17 @@ Card Deck::GetFirstCard()
 	Card card = _cards[_cards.size() - 1];
 	_cards.pop_back();
 	return card;
+}
+
+void Deck::SaveDeckToJson(std::string name)
+{
+	std::ostringstream jsonName;
+	jsonName << name << ".json";
+	// Check if exists.
+	std::ifstream check(jsonName.str());
+	if (check.good()) return;
+
+	// If not : generate.
+	std::ofstream tempFile{ jsonName.str()};
+	json assetList;
 }

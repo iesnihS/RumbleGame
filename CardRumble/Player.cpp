@@ -1,16 +1,15 @@
 #include "Player.h"
 #include <stdexcept>
 
-Player::Player(Deck* deck, std::string name) : _deck(deck), _name(name) {}
+Player::Player(Deck deck, std::string name) : _deck(deck), _name(name) {}
 
-Player::Player(std::string name) : _name(name) { _deck = nullptr; }
 
-void Player::SetDeck(Deck* deck) { _deck = deck; }
+void Player::SetDeck(Deck deck) { _deck = deck; }
 
 bool Player::Draw()
 {
-	if (_deck->_cards.empty()) return false;
-	_hand.push_back(_deck->GetFirstCard());
+	if (_deck._cards.empty()) return false;
+	_hand.push_back(_deck.GetFirstCard());
 	return true;
 }
 
@@ -54,4 +53,21 @@ void Player::AttackPlayer(Player* player)
 	{
 		player->_pv -= _board[i]._atk;
 	}
+}
+
+void Player::PrintHand()
+{
+	std::cout << "Player " + _name + " hand :\n";
+	for(uint32_t i = 0; i < _hand.size(); i ++)
+	{
+		_hand[i].PrintCard();
+	}
+}
+
+void Player::Reset()
+{
+	_pv = 30;
+	_currentMana = 1;
+	_hand.clear();
+	_board.clear();
 }

@@ -15,5 +15,6 @@ class Deck
 
 		void Shuffle();
 		Card GetFirstCard();
+		void SaveDeckToJson(std::string name);
 };
 

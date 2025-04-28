@@ -16,9 +16,9 @@ void Card::InitAllPossibleCards()
 	std::ofstream tempFile{ "assetList.json" };
 	json assetList;
 
-	for(uint32_t atk = 0; atk < _maxCost; atk++)
+	for (uint32_t atk = 0; atk < _maxCost * 2 - 1; atk++)
 	{
-		for(uint16_t def = 1; def < _maxCost; def++)
+		for(uint16_t def = 1; def < _maxCost * 2 - atk; def++)
 		{
 			std::ostringstream name;
 			name << "Vanilla(" << atk << "," << def << ")";
@@ -37,7 +37,9 @@ Card::Card()
 {
 	_atk = rand() % (_maxCost + 1);
 	_def = rand() % _maxCost + 1;
-
+	std::ostringstream oss;
+	oss << "Vanilla(" << _atk << "," << _def << ")";
+	_name = oss.str();
 	_manaCost = ceil((_atk + _def)/2);
 }
 

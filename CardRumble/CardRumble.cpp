@@ -2,97 +2,114 @@
 #include <sstream>
 #include "Player.h"
 
-constexpr uint32_t NB_GAMES_PER_PASS = 500;
+constexpr uint32_t NB_GAMES_PER_PASS = 1000;
 
 Deck deckP1;
 Deck deckReference;
 
-Player p1("Samuel");
-Player p2("Arthur");
+Player* p1;
+Player* p2;
 
-static bool PlayerTurn(Player* firstPlayer, Player* secondPlayer)
+static bool PlayerTurn(Player* currentPlayer, Player* enemyPlayer)
 {
-	if (!firstPlayer->Draw())
+	if (!currentPlayer->Draw())
 	{
-		std::cout << firstPlayer->_name + " Win !";
+		std::cout << enemyPlayer->_name + " Win !";
+		enemyPlayer->_nbOfGameWin++;
 		return true;
 	}
-	firstPlayer->PlayBestCard();
-	firstPlayer->AttackPlayer(secondPlayer);
-	if (secondPlayer->_pv <= 0)
+	currentPlayer->PlayBestCard();
+	currentPlayer->AttackPlayer(enemyPlayer);
+	if (enemyPlayer->_pv <= 0)
 	{
-		std::cout << firstPlayer->_name + " Win !";
+		std::cout << currentPlayer->_name + " Win !";
+		currentPlayer->_nbOfGameWin ++;
 		return true;
 	}
 	return false;
 }
 
-static int Game()
+void Game()
 {
-	bool isFirst = rand() % 2;
-	Player* firstPlayer = isFirst ? &p1 : &p2;
-	Player* secondPlayer = !isFirst ? &p1 : &p2;
+	bool isFirst = rand() % 2 == 0;
+	
+
+	Player* firstPlayer = isFirst ? p1 : p2;
+	Player* secondPlayer = !isFirst ? p1 : p2;
+
+	std::cout << "FIRST PLAYER  " << firstPlayer->_name << std::endl;
+	std::cout << "SECOND PLAYER  " << secondPlayer->_name << std::endl;
+
+	firstPlayer->_deck.Shuffle();
+	secondPlayer->_deck.Shuffle();
 
 	uint32_t turn = 1;
 	for (uint16_t i = 0; i < 5; i++)
 	{
-		p1.Draw();
-		p2.Draw();
+		firstPlayer->Draw();
+		secondPlayer->Draw();
 	}
 
-	int winnerIdx = -1;
+	firstPlayer->_currentMana = turn;
+	secondPlayer->_currentMana = turn;
+
+	firstPlayer->PrintHand();
+	secondPlayer->PrintHand();
+
 	while (true)
 	{
-		if (PlayerTurn(&p1, &p2))
-		{
-			winnerIdx = 1;
+		if (PlayerTurn(firstPlayer, secondPlayer))
 			break;
-		}
-		if (PlayerTurn(&p2, &p1))
-		{
-			winnerIdx = 2;
+		if (PlayerTurn(secondPlayer, firstPlayer))
 			break;
-		}
+		turn++;
+		firstPlayer->_currentMana = turn;
+		secondPlayer->_currentMana = turn;
 	}
-	return winnerIdx;
+	std::cout << "P1 pv : " << firstPlayer->_pv << " P2 pv : " << secondPlayer->_pv << "\n" << std::endl;
+	return;
 }
 
-static void OptiPass()
+void ResetGame()
 {
+	p1->Reset();
+	p2->Reset();
+
+	p1->SetDeck(deckReference);
+	p2->SetDeck(deckReference);
+}
+
+void OptiPass()
+{
+	deckReference = Deck("reference_player.json");
 	deckP1 = Deck();
-	p1.SetDeck(&deckP1);
+	p1->SetDeck(deckReference);
+	p2->SetDeck(deckReference);
 	
 	int nbGames = 0;
-	std::vector<int> winIndices;
 	while (nbGames < NB_GAMES_PER_PASS)
 	{
-		winIndices.push_back(Game());
+		Game();
+		ResetGame();
 		++nbGames;
 	}
 
-	float p1Win, p2Win;
-	p1Win = p2Win = 0;
-	for(int winIdx : winIndices)
-	{
-		if (winIdx == 1) ++p1Win;
-		else ++p2Win;
-	}
-
-	p1Win /= NB_GAMES_PER_PASS;
-	p2Win /= NB_GAMES_PER_PASS;
+	float res1 = (float) p1->_nbOfGameWin / NB_GAMES_PER_PASS;
+	float res2 = (float) p2->_nbOfGameWin / NB_GAMES_PER_PASS;
 
 	std::ostringstream oss;
-	oss << "Winrate " << p1._name << " = " << p1Win * 100 << "% " << " | Winrate " 
-		<< p2._name << " = " << p2Win * 100 << "% ";
+	oss << "Winrate " << p1->_name << " = " << res1 * 100 << "% " << " | Winrate "
+		<< p2->_name << " = " << res2 * 100 << "% ";
 	std::cout << oss.str() << std::endl;
 }
 
 int main()
 {
 	Card::InitAllPossibleCards();
-	deckReference = Deck("reference_player.json");
-	p2.SetDeck(&deckReference);
-	srand(time(NULL));
+	p1 = new Player(Deck(), "Samuel");
+	p2 = new Player(Deck("reference_player.json"), "Arthur");
+	srand(time(0));
 
 	OptiPass();
+	std::ofstream outfile("test.txt");
 }
