@@ -10,7 +10,7 @@ int main()
 {
 	srand(time(NULL));
 	deckP1 = Deck();
-	deckReference = Deck();
+	deckReference = Deck("reference_player.json");
 
 	bool isFirst = rand() % 2;
 

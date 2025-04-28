@@ -137,9 +137,13 @@
     <ClInclude Include="Deck.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="single_include\nlohmann\json.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CardRumble.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="reference_player.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

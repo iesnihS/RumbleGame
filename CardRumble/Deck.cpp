@@ -1,6 +1,8 @@
 #include "Deck.h"
 #include <algorithm>
 #include <random>
+#include "./single_include/nlohmann/json.hpp"
+using json = nlohmann::json;
 
 Deck::Deck()
 {
@@ -8,6 +10,16 @@ Deck::Deck()
 	{
 		_cards.push_back(Card());
 	}
+}
+
+Deck::Deck(std::string fileName)
+{
+	std::ifstream file;
+	file.open(fileName);
+	json in = json::parse(file);
+
+	for (auto& el : in["deck"].items()) _cards.push_back(Card(el.value()));
+	for (Card c : _cards) c.PrintCard();
 }
 
 void Deck::Shuffle()
