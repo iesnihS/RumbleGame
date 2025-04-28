@@ -1,11 +1,11 @@
 #include "Player.h"
 #include <stdexcept>
 
-Player::Player(Deck* deck, std::string name)
-{
-	_deck = deck;
-	_name = name;
-}
+Player::Player(Deck* deck, std::string name) : _deck(deck), _name(name) {}
+
+Player::Player(std::string name) : _name(name) { _deck = nullptr; }
+
+void Player::SetDeck(Deck* deck) { _deck = deck; }
 
 bool Player::Draw()
 {
@@ -32,15 +32,13 @@ void Player::PlayBestCard()
 
 	}
 
-	if (index < 0)return;
+	if (index < 0) return;
 	PlayCard(index);
 	if (_currentMana > 0)
 		PlayBestCard();
 }
 void Player::PlayCard(uint32_t iHand)
 {
-	if (iHand < 0) return;
-
 	Card card = _hand.at(iHand);
 	if (card._manaCost > _currentMana)
 		throw std::invalid_argument("Error with mana value");

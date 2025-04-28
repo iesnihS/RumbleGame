@@ -8,6 +8,11 @@ uint32_t Card::_maxCost = 6;
 
 void Card::InitAllPossibleCards()
 {
+	// Check if exists.
+	std::ifstream check("assetList.json");
+	if(check.good()) return;
+
+	// If not : generate.
 	std::ofstream tempFile{ "assetList.json" };
 	json assetList;
 
@@ -24,7 +29,6 @@ void Card::InitAllPossibleCards()
 			assetList.emplace_back(card);
 		}
 	}
-	std::cout << assetList << std::endl;
 	tempFile << assetList;
 	tempFile.close();
 }

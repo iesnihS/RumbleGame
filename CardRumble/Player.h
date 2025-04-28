@@ -14,6 +14,9 @@ public:
 	std::vector<Card> _board;
 
 	Player(Deck* deck, std::string name);
+	Player(std::string name);
+
+	void SetDeck(Deck* deck);
 
 	bool Draw();
 	void PlayBestCard();
