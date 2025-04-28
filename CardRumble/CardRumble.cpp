@@ -4,10 +4,11 @@
 Deck deckP1;
 Deck deckReference;
 
-
+bool PlayerTurn(Player*, Player*);
 
 int main()
 {
+	
 	srand(time(NULL));
 	deckP1 = Deck();
 	deckReference = Deck("reference_player.json");
