@@ -1,12 +1,16 @@
 #include <iostream>
 #include <sstream>
 #include "Player.h"
+#include "Visualiser.h"
+
 constexpr uint32_t NB_GAMES_PER_PASS = 1000;
 constexpr uint32_t NB_OPTI_PASS = 500;
 constexpr bool DEBUG = false;
 
 Deck deckP1;
 Deck deckReference;
+
+std::vector<double> winRates;
 
 Player* p1;
 Player* p2;
@@ -107,8 +111,10 @@ void OptiPass()
 	}
 
 	float res1 = (float) p1->_nbOfGameWin / NB_GAMES_PER_PASS;
-	float res2 = (float) p2->_nbOfGameWin / NB_GAMES_PER_PASS;
-
+	float res2 = (float)p2->_nbOfGameWin / NB_GAMES_PER_PASS;
+	winRates.push_back((double)res1);
+	winRates.push_back((double)res2);
+	Visualiser::GenPieChart(winRates);
 	p1->_nbOfGameWin = 0;
 	p2->_nbOfGameWin = 0;
 
@@ -119,18 +125,13 @@ void OptiPass()
 			<< p2->_name << " = " << res2 * 100 << "% ";
 		std::cout << oss.str() << std::endl;
 	}
-	
-
 
 	std::ifstream f("Fromage.json");
 	json data = json::parse(f);
 
 	if (data["WinRate"] > res1)return;
-	deckP1.SaveDeckToJson("Fromage", res1); 
-}
+	deckP1.SaveDeckToJson("Fromage", res1);
 
-static void DrawTrace()
-{
 
 }
 

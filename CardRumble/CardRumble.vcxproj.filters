@@ -50,9 +50,6 @@
     <ClInclude Include="Visualiser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="matplotplusplus_x64-windows\include\matplot\matplot.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CardRumble.rc">

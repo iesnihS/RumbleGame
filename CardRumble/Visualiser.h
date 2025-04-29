@@ -6,6 +6,6 @@ class Visualiser
 public:
 	Visualiser();
 
-	void GenPieChart(float winRateP1, float winRateP2);
+	static void GenPieChart(const std::vector<double>& winRates);
 };
 
