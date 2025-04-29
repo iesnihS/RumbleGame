@@ -13,11 +13,36 @@ Deck::Deck()
 		setList = json::parse(check);
 	else return;
 
-	  
+	 
+
 	for(uint32_t i = 0; i < 30; i ++)
 	{
-		_cards.push_back(Card(setList[0]));
+		Card currentLastCard = Card(setList[rand() % setList.size()]);
+		while(true)
+		{
+			if (FullOfCard(currentLastCard))
+			{
+				currentLastCard = Card(setList[rand() % setList.size()]);
+				continue;
+			}
+			break;
+		}
+		_cards.push_back(currentLastCard);
 	}
+}
+bool Deck::FullOfCard(Card& card)
+{
+	uint32_t indexNb = 0;
+	for (uint32_t i = 0; i < _cards.size(); i++)
+	{
+		if (_cards[i]._name == card._name)
+		{
+			indexNb++;
+			if (indexNb == _mxExample)
+				return true;
+		}
+	}
+	return false;
 }
 
 Deck::Deck(std::string fileName)
