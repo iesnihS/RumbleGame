@@ -19,5 +19,9 @@ class Card
 		static void InitAllPossibleCards();
 
 		void PrintCard() const;
+
+		void to_json(json& j);
+
+		void from_json(const json& j);
 };
 

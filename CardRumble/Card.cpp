@@ -59,3 +59,16 @@ void Card::PrintCard() const
 	oss << _name << " | " << _atk << " ATK | " << _def << " DEF";
 	std::cout << oss.str() << std::endl;
 }
+
+void Card::to_json(json& j) {
+	j = json{
+		{"name", _name},
+		{"atk", _atk},
+		{"def", _def} };
+}
+
+void Card::from_json(const json& j) {
+	j.at("name").get_to(_name);
+	j.at("atk").get_to(_atk);
+	j.at("def").get_to(_def);
+}

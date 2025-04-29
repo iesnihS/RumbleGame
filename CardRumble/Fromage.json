@@ -1,0 +1,155 @@
+{
+  "WinRate": 0.843999981880188,
+  "deck": [
+    {
+      "atk": 1,
+      "def": 4,
+      "name": "Vanilla(1,4)"
+    },
+    {
+      "atk": 2,
+      "def": 4,
+      "name": "Vanilla(2,4)"
+    },
+    {
+      "atk": 4,
+      "def": 4,
+      "name": "Vanilla(4,4)"
+    },
+    {
+      "atk": 4,
+      "def": 2,
+      "name": "Vanilla(4,2)"
+    },
+    {
+      "atk": 5,
+      "def": 2,
+      "name": "Vanilla(5,2)"
+    },
+    {
+      "atk": 2,
+      "def": 3,
+      "name": "Vanilla(2,3)"
+    },
+    {
+      "atk": 2,
+      "def": 2,
+      "name": "Vanilla(2,2)"
+    },
+    {
+      "atk": 5,
+      "def": 2,
+      "name": "Vanilla(5,2)"
+    },
+    {
+      "atk": 0,
+      "def": 5,
+      "name": "Vanilla(0,5)"
+    },
+    {
+      "atk": 2,
+      "def": 1,
+      "name": "Vanilla(2,1)"
+    },
+    {
+      "atk": 1,
+      "def": 2,
+      "name": "Vanilla(1,2)"
+    },
+    {
+      "atk": 2,
+      "def": 6,
+      "name": "Vanilla(2,6)"
+    },
+    {
+      "atk": 6,
+      "def": 2,
+      "name": "Vanilla(6,2)"
+    },
+    {
+      "atk": 1,
+      "def": 1,
+      "name": "Vanilla(1,1)"
+    },
+    {
+      "atk": 2,
+      "def": 5,
+      "name": "Vanilla(2,5)"
+    },
+    {
+      "atk": 1,
+      "def": 2,
+      "name": "Vanilla(1,2)"
+    },
+    {
+      "atk": 1,
+      "def": 1,
+      "name": "Vanilla(1,1)"
+    },
+    {
+      "atk": 4,
+      "def": 2,
+      "name": "Vanilla(4,2)"
+    },
+    {
+      "atk": 2,
+      "def": 1,
+      "name": "Vanilla(2,1)"
+    },
+    {
+      "atk": 0,
+      "def": 3,
+      "name": "Vanilla(0,3)"
+    },
+    {
+      "atk": 5,
+      "def": 1,
+      "name": "Vanilla(5,1)"
+    },
+    {
+      "atk": 5,
+      "def": 5,
+      "name": "Vanilla(5,5)"
+    },
+    {
+      "atk": 6,
+      "def": 6,
+      "name": "Vanilla(6,6)"
+    },
+    {
+      "atk": 4,
+      "def": 1,
+      "name": "Vanilla(4,1)"
+    },
+    {
+      "atk": 4,
+      "def": 2,
+      "name": "Vanilla(4,2)"
+    },
+    {
+      "atk": 6,
+      "def": 3,
+      "name": "Vanilla(6,3)"
+    },
+    {
+      "atk": 0,
+      "def": 5,
+      "name": "Vanilla(0,5)"
+    },
+    {
+      "atk": 3,
+      "def": 1,
+      "name": "Vanilla(3,1)"
+    },
+    {
+      "atk": 6,
+      "def": 5,
+      "name": "Vanilla(6,5)"
+    },
+    {
+      "atk": 2,
+      "def": 1,
+      "name": "Vanilla(2,1)"
+    }
+  ]
+}
