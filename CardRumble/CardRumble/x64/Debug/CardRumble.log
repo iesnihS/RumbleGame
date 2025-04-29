@@ -1,2 +1,3 @@
-﻿  Deck.cpp
+﻿  CardRumble.cpp
+C:\Users\fullc\Desktop\Projects\RumbleGame\CardRumble\CardRumble.cpp(201,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   CardRumble.vcxproj -> C:\Users\fullc\Desktop\Projects\RumbleGame\CardRumble\x64\Debug\CardRumble.exe

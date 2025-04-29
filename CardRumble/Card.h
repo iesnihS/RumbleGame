@@ -14,6 +14,7 @@ class Card
 		std::string _name;
 
 		Card(json source);
+		Card();
 
 		static void InitAllPossibleCards();
 
