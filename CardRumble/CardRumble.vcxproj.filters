@@ -30,6 +30,21 @@
     <ClCompile Include="Visualiser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\nodesoup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\algebra.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\fruchterman_reingold.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\kamada_kawai.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\layout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h">
@@ -49,6 +64,21 @@
     </ClInclude>
     <ClInclude Include="Visualiser.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\include\nodesoup.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\algebra.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\fruchterman_reingold.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\kamada_kawai.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\layout.hpp">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,13 +1,8 @@
 ﻿  The vcpkg manifest was disabled, but we found a manifest file in C:\Users\artal\Documents\Visual Studio 2022\RumbleGame\CardRumble\. You may want to enable vcpkg manifests in your properties page or pass /p:VcpkgEnableManifest=true to the msbuild invocation.
-  Card.cpp
-C:\Users\artal\Documents\Visual Studio 2022\RumbleGame\CardRumble\Card.cpp(44,18): warning C4244: '=' : conversion de 'double' en 'uint32_t', perte possible de données
-C:\Users\artal\Documents\Visual Studio 2022\RumbleGame\CardRumble\Card.cpp(53,18): warning C4244: '=' : conversion de 'double' en 'uint32_t', perte possible de données
-  CardRumble.cpp
-C:\Users\artal\Documents\Visual Studio 2022\RumbleGame\CardRumble\CardRumble.cpp(143,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
-  Deck.cpp
-  Player.cpp
   Visualiser.cpp
-matplot.lib(network.cpp.obj) : error LNK2001: symbole externe non résolu "class std::vector<struct nodesoup::Point2D,class std::allocator<struct nodesoup::Point2D> > __cdecl nodesoup::fruchterman_reingold(class std::vector<class std::vector<unsigned __int64,class std::allocator<unsigned __int64> >,class std::allocator<class std::vector<unsigned __int64,class std::allocator<unsigned __int64> > > > const &,unsigned int,unsigned int,unsigned int,double,class std::function<void __cdecl(class std::vector<struct nodesoup::Point2D,class std::allocator<struct nodesoup::Point2D> > const &,int)>)" (?fruchterman_reingold@nodesoup@@YA?AV?$vector@UPoint2D@nodesoup@@V?$allocator@UPoint2D@nodesoup@@@std@@@std@@AEBV?$vector@V?$vector@_KV?$allocator@_K@std@@@std@@V?$allocator@V?$vector@_KV?$allocator@_K@std@@@std@@@2@@3@IIINV?$function@$$A6AXAEBV?$vector@UPoint2D@nodesoup@@V?$allocator@UPoint2D@nodesoup@@@std@@@std@@H@Z@3@@Z)
-matplot.lib(network.cpp.obj) : error LNK2001: symbole externe non résolu "class std::vector<struct nodesoup::Point2D,class std::allocator<struct nodesoup::Point2D> > __cdecl nodesoup::kamada_kawai(class std::vector<class std::vector<unsigned __int64,class std::allocator<unsigned __int64> >,class std::allocator<class std::vector<unsigned __int64,class std::allocator<unsigned __int64> > > > const &,unsigned int,unsigned int,double,double)" (?kamada_kawai@nodesoup@@YA?AV?$vector@UPoint2D@nodesoup@@V?$allocator@UPoint2D@nodesoup@@@std@@@std@@AEBV?$vector@V?$vector@_KV?$allocator@_K@std@@@std@@V?$allocator@V?$vector@_KV?$allocator@_K@std@@@std@@@2@@3@IINN@Z)
-matplot.lib(network.cpp.obj) : error LNK2001: symbole externe non résolu "class std::vector<double,class std::allocator<double> > __cdecl nodesoup::size_radiuses(class std::vector<class std::vector<unsigned __int64,class std::allocator<unsigned __int64> >,class std::allocator<class std::vector<unsigned __int64,class std::allocator<unsigned __int64> > > > const &,double,double)" (?size_radiuses@nodesoup@@YA?AV?$vector@NV?$allocator@N@std@@@std@@AEBV?$vector@V?$vector@_KV?$allocator@_K@std@@@std@@V?$allocator@V?$vector@_KV?$allocator@_K@std@@@std@@@2@@3@NN@Z)
-C:\Users\artal\Documents\Visual Studio 2022\RumbleGame\CardRumble\x64\Release\CardRumble.exe : fatal error LNK1120: 3 externes non résolus
+  Génération de code en cours
+  970 of 1907 functions (50.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    121 functions had inline decision re-evaluated but remain unchanged
+  Fin de la génération du code
+  CardRumble.vcxproj -> C:\Users\artal\Documents\Visual Studio 2022\RumbleGame\CardRumble\x64\Release\CardRumble.exe

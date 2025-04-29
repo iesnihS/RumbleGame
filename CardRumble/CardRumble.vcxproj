@@ -72,13 +72,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>matplotplusplus_x64-windows\include</IncludePath>
-    <SourcePath>matplotplusplus-master/source;$(SourcePath)</SourcePath>
-    <LibraryPath>matplotplusplus_x64-windows\lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(VC_SourcePath)</SourcePath>
+    <LibraryPath>matplotplusplus_x64-windows\debug\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>matplotplusplus_x64-windows\include</IncludePath>
-    <SourcePath>matplotplusplus-master/source;$(SourcePath)</SourcePath>
-    <LibraryPath>matplotplusplus_x64-windows\lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(VC_SourcePath)</SourcePath>
+    <LibraryPath>matplotplusplus_x64-windows\debug\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>matplotplusplus_x64-windows\include</IncludePath>
@@ -160,12 +160,22 @@
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="CardRumble.cpp" />
     <ClCompile Include="Deck.cpp" />
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\algebra.cpp" />
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\fruchterman_reingold.cpp" />
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\kamada_kawai.cpp" />
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\layout.cpp" />
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\nodesoup.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Visualiser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h" />
     <ClInclude Include="Deck.h" />
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\include\nodesoup.hpp" />
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\algebra.hpp" />
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\fruchterman_reingold.hpp" />
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\kamada_kawai.hpp" />
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\layout.hpp" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="single_include\nlohmann\json.hpp" />
