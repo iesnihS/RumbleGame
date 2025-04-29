@@ -71,12 +71,22 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>matplotplusplus_x64-windows\include;$(IncludePath)</IncludePath>
-    <SourcePath>matplotplusplus-master/source;$(SourcePath)</SourcePath>
+    <IncludePath>matplotplusplus_x64-windows\include</IncludePath>
+    <SourcePath>$(VC_SourcePath)</SourcePath>
+    <LibraryPath>matplotplusplus_x64-windows\debug\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>matplotplusplus_x64-windows\include;$(IncludePath)</IncludePath>
-    <SourcePath>matplotplusplus-master/source;$(SourcePath)</SourcePath>
+    <IncludePath>matplotplusplus_x64-windows\include</IncludePath>
+    <SourcePath>$(VC_SourcePath)</SourcePath>
+    <LibraryPath>matplotplusplus_x64-windows\debug\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>matplotplusplus_x64-windows\include</IncludePath>
+    <LibraryPath>matplotplusplus_x64-windows\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>matplotplusplus_x64-windows\include</IncludePath>
+    <LibraryPath>matplotplusplus_x64-windows\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -85,10 +95,12 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>matplot.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -99,12 +111,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>matplot.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -114,10 +129,12 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>matplot.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -128,25 +145,37 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>matplot.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="CardRumble.cpp" />
     <ClCompile Include="Deck.cpp" />
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\algebra.cpp" />
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\fruchterman_reingold.cpp" />
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\kamada_kawai.cpp" />
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\layout.cpp" />
+    <ClCompile Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\nodesoup.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Visualiser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h" />
     <ClInclude Include="Deck.h" />
-    <ClInclude Include="matplotplusplus_x64-windows\include\matplot\matplot.h" />
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\include\nodesoup.hpp" />
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\algebra.hpp" />
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\fruchterman_reingold.hpp" />
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\kamada_kawai.hpp" />
+    <ClInclude Include="matplotplusplus_x64-windows\include\3rd_party\nodesoup\src\layout.hpp" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="single_include\nlohmann\json.hpp" />

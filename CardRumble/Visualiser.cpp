@@ -5,9 +5,11 @@
 
 Visualiser::Visualiser()
 {
+
 }
 
-void Visualiser::GenPieChart(float winRateP1, float winRateP2)
+void Visualiser::GenPieChart(const std::vector<double>& winRates)
 {
-//	matplot::pie(winRateP1);
+	matplot::pie(winRates);
+	matplot::show();
 }

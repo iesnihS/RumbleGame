@@ -1,12 +1,17 @@
 #include <iostream>
 #include <sstream>
 #include "Player.h"
-constexpr uint32_t NB_GAMES_PER_PASS = 500;
-constexpr uint32_t NB_OPTI_PASS = 5000;
+#include "Visualiser.h"
+
+constexpr uint32_t NB_GAMES_PER_PASS = 1000;
+constexpr uint32_t NB_OPTI_PASS = 500;
+
 constexpr bool DEBUG = false;
 
 Deck deckP1;
 Deck deckReference;
+
+std::vector<double> winRates;
 
 Player* p1;
 Player* p2;
@@ -111,8 +116,10 @@ void OptiPass()
 	}
 
 	float res1 = (float) p1->_nbOfGameWin / NB_GAMES_PER_PASS;
-	float res2 = (float) p2->_nbOfGameWin / NB_GAMES_PER_PASS;
-
+	float res2 = (float)p2->_nbOfGameWin / NB_GAMES_PER_PASS;
+	winRates.push_back((double)res1);
+	winRates.push_back((double)res2);
+	Visualiser::GenPieChart(winRates);
 	p1->_nbOfGameWin = 0;
 	p2->_nbOfGameWin = 0;
 
@@ -123,8 +130,6 @@ void OptiPass()
 			<< p2->_name << " = " << res2 * 100 << "% ";
 		std::cout << oss.str() << std::endl;
 	}
-	
-
 	
 	std::ifstream f("BestDeck.json");
 	if (f.good())
@@ -164,17 +169,12 @@ void OptiPass()
 	
 }
 
-static void DrawTrace()
-{
-
-}
 void AddCarteToData(std::string dataName, Card& card)
 {
 	json lastCard;
 	card.to_json(lastCard);
 	data[dataName] = lastCard;
 }
-
 int main()
 {
 	std::ifstream i("data.json");
