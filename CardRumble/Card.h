@@ -13,7 +13,6 @@ class Card
 		uint32_t _def = 1;
 		std::string _name;
 
-		Card();
 		Card(json source);
 
 		static void InitAllPossibleCards();

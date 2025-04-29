@@ -7,9 +7,16 @@ using json = nlohmann::json;
 
 Deck::Deck()
 {
+	json setList;
+	std::ifstream check("setList.json");
+	if (check.good())
+		setList = json::parse(check);
+	else return;
+
+	  
 	for(uint32_t i = 0; i < 30; i ++)
 	{
-		_cards.push_back(Card());
+		_cards.push_back(Card(setList[0]));
 	}
 }
 
@@ -55,5 +62,15 @@ void Deck::SaveDeckToJson(std::string name, float winRate)
 	dataDeck["deck"] = deck;
 	dataDeck["WinRate"] = winRate;
 	tempFile << dataDeck;
+}
+
+void Deck::ChangeCard(std::string remove, Card add)
+{
+	for(uint32_t i = 0; i < _cards.size(); i++)
+	{
+		if (_cards[i]._name != remove) continue;
+
+		_cards[i] = add;
+	}
 }
 
