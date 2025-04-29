@@ -10,16 +10,17 @@ uint32_t Card::_maxCost = 6;
 void Card::InitAllPossibleCards()
 {
 	// Check if exists.
-	std::ifstream check("assetList.json");
+	std::ifstream check("setList.json");
 	if(check.good()) return;
 
 	// If not : generate.
-	std::ofstream tempFile{ "assetList.json" };
+	std::ofstream tempFile{ "setList.json" };
+
 	json assetList;
 
-	for (uint32_t atk = 0; atk < _maxCost * 2 - 1; atk++)
+	for (uint32_t atk = 0; atk < _maxCost * 2 + 1; atk++)
 	{
-		for(uint16_t def = 1; def < _maxCost * 2 - atk; def++)
+		for(uint16_t def = 1; def < _maxCost * 2 - atk +2; def++)
 		{
 			std::ostringstream name;
 			name << "Vanilla(" << atk << "," << def << ")";
@@ -34,22 +35,9 @@ void Card::InitAllPossibleCards()
 	tempFile.close();
 }
 
-Card::Card()
-{
-	_atk = rand() % (_maxCost + 1);
-	_def = rand() % _maxCost + 1;
-	std::ostringstream oss;
-	oss << "Vanilla(" << _atk << "," << _def << ")";
-	_name = oss.str();
-	_manaCost = ceil((_atk + _def)/2);
-}
-
 Card::Card(json source)
 {
-	source["name"].get_to(_name);
-	source["attack"].get_to(_atk);
-	source["defense"].get_to(_def);
-
+	from_json(source);
 	_manaCost = ceil((_atk + _def) / 2);
 }
 
@@ -63,12 +51,12 @@ void Card::PrintCard() const
 void Card::to_json(json& j) {
 	j = json{
 		{"name", _name},
-		{"atk", _atk},
-		{"def", _def} };
+		{"attack", _atk},
+		{"defense", _def} };
 }
 
 void Card::from_json(const json& j) {
-	j.at("name").get_to(_name);
-	j.at("atk").get_to(_atk);
-	j.at("def").get_to(_def);
+	j["name"].get_to(_name);
+	j["attack"].get_to(_atk);
+	j["defense"].get_to(_def);
 }

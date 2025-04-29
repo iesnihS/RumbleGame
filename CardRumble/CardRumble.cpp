@@ -121,12 +121,16 @@ void OptiPass()
 	}
 	
 
-
-	std::ifstream f("Fromage.json");
-	json data = json::parse(f);
-
-	if (data["WinRate"] > res1)return;
-	deckP1.SaveDeckToJson("Fromage", res1); 
+	
+	std::ifstream f("BestDeck.json");
+	if (f.good())
+	{
+		json data = json::parse(f);
+		if (data["WinRate"] > res1)return;
+			deckP1.SaveDeckToJson("BestDeck", res1);
+	}
+	else
+		deckP1.SaveDeckToJson("BestDeck", res1);
 }
 
 static void DrawTrace()
@@ -136,6 +140,7 @@ static void DrawTrace()
 
 int main()
 {
+	
 	Card::InitAllPossibleCards();
 	p1 = new Player(Deck(), "Samuel");
 	p2 = new Player(Deck("reference_player.json"), "Arthur");
