@@ -10,7 +10,8 @@ constexpr bool DEBUG = false;
 Deck deckP1;
 Deck deckReference;
 
-std::vector<double> winRates;
+std::vector<double> pieWin;
+std::vector<double> graphWin;
 
 Player* p1;
 Player* p2;
@@ -93,6 +94,8 @@ void ResetGame()
 
 	p1->SetDeck(deckP1);
 	p2->SetDeck(deckReference);
+
+	pieWin.clear();
 }
 
 void OptiPass()
@@ -110,13 +113,15 @@ void OptiPass()
 		++nbGames;
 	}
 
-	float res1 = (float) p1->_nbOfGameWin / NB_GAMES_PER_PASS;
+	float res1 = (float)p1->_nbOfGameWin / NB_GAMES_PER_PASS;
 	float res2 = (float)p2->_nbOfGameWin / NB_GAMES_PER_PASS;
-	winRates.push_back((double)res1);
-	winRates.push_back((double)res2);
-	Visualiser::GenPieChart(winRates);
 	p1->_nbOfGameWin = 0;
 	p2->_nbOfGameWin = 0;
+
+	pieWin.push_back((double)res1);
+	pieWin.push_back((double)res2);
+	graphWin.push_back((double)res1);
+	//Visualiser::GenPieChart(pieWin, nbGames);
 
 	if (DEBUG)
 	{
@@ -150,4 +155,5 @@ int main()
 		OptiPass();
 		std::cout << "Process at " << ((float)i / NB_OPTI_PASS * 100) << "%\n";
 	}
+	Visualiser::GenGraph(graphWin, 0);
 }
