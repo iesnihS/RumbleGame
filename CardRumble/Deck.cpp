@@ -96,6 +96,7 @@ void Deck::ChangeCard(std::string remove, Card add)
 		if (_cards[i]._name != remove) continue;
 
 		_cards[i] = add;
+		break;
 	}
 }
 

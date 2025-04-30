@@ -5,6 +5,7 @@
 
 constexpr uint32_t NB_GAMES_PER_PASS = 1000;
 constexpr uint32_t NB_OPTI_PASS = 500;
+
 constexpr bool DEBUG = false;
 
 Deck deckP1;
@@ -15,6 +16,10 @@ std::vector<double> graphWin;
 
 Player* p1;
 Player* p2;
+
+json data;
+
+void AddCarteToData(std::string, Card&);
 
 static bool PlayerTurn(Player* currentPlayer, Player* enemyPlayer)
 {
@@ -87,6 +92,8 @@ void Game()
 	return;
 }
 
+
+
 void ResetGame()
 {
 	p1->Reset();
@@ -100,8 +107,6 @@ void ResetGame()
 
 void OptiPass()
 {
-	deckReference = Deck("reference_player.json");
-	deckP1 = Deck();
 	p1->SetDeck(deckP1);
 	p2->SetDeck(deckReference);
 	
@@ -134,26 +139,79 @@ void OptiPass()
 	std::ifstream f("BestDeck.json");
 	if (f.good())
 	{
-		json data = json::parse(f);
-		if (data["WinRate"] > res1)return;
+		json deckJ = json::parse(f);
+		json setList;
+		std::ifstream iset("setList.json");
+		setList = json::parse(iset);
+
+		if (deckJ["WinRate"] > res1)
+		{
+			Card removedCard =Card(data["LastRemovedCard"]);
+			Card addedCard = Card(data["LastAddedCard"]);
+			deckP1.ChangeCard(addedCard._name, removedCard);
+		}
+		else
 			deckP1.SaveDeckToJson("BestDeck", res1);
+
+		Card removedCard = deckP1._cards[rand() % deckP1._cards.size()];
+		Card addedCard = Card(setList[rand() % setList.size()]);
+		while (true)
+		{
+			if(deckP1.FullOfCard(addedCard))
+			{
+				addedCard = Card(setList[rand() % setList.size()]);
+				continue;
+			}
+			break;
+		}
+		AddCarteToData("LastRemovedCard",removedCard);
+		AddCarteToData("LastAddedCard", addedCard);
+		deckP1.ChangeCard(removedCard._name, addedCard);
 	}
 	else
 		deckP1.SaveDeckToJson("BestDeck", res1);
+
+	
 }
 
+void AddCarteToData(std::string dataName, Card& card)
+{
+	json lastCard;
+	card.to_json(lastCard);
+	data[dataName] = lastCard;
+}
 int main()
 {
+	std::ifstream i("data.json");
+
+	if (i.good())
+		data = json::parse(i);
+	else
+	{
+		std::ofstream o{ "data.json" };
+		Card temp1 = Card();
+		AddCarteToData("LastRemovedCard", temp1);
+		Card temp2 = Card();
+		AddCarteToData("LastAddedCard", temp2);
+		o << data;
+	}
 	
 	Card::InitAllPossibleCards();
-	p1 = new Player(Deck(), "Samuel");
-	p2 = new Player(Deck("reference_player.json"), "Arthur");
+
+	deckReference = Deck("reference_player.json");
+	deckP1 = Deck("BestDeck.json");
+
+	p1 = new Player(deckP1, "Samuel");
+	p2 = new Player(deckReference, "Arthur");
 	srand(time(0));
-	
+
+
 	for(uint32_t i = 0; i < NB_OPTI_PASS; i++)
 	{
 		OptiPass();
 		std::cout << "Process at " << ((float)i / NB_OPTI_PASS * 100) << "%\n";
 	}
 	Visualiser::GenGraph(graphWin, 0);
+	std::ofstream o{ "data.json" };
+	o << data;
 }

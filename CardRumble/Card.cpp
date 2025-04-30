@@ -35,10 +35,20 @@ void Card::InitAllPossibleCards()
 	tempFile.close();
 }
 
+Card::Card()
+{
+	json setList;
+	std::ifstream check("setList.json");
+	if (check.good())
+		setList = json::parse(check);
+	else return;
+
+	json source = setList[rand() % setList.size()];
+	from_json(source);
+}
 Card::Card(json source)
 {
 	from_json(source);
-	_manaCost = ceil((_atk + _def) / 2);
 }
 
 void Card::PrintCard() const
@@ -59,4 +69,5 @@ void Card::from_json(const json& j) {
 	j["name"].get_to(_name);
 	j["attack"].get_to(_atk);
 	j["defense"].get_to(_def);
+	_manaCost = ceil((_atk + _def) / 2);
 }
