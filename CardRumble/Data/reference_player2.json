@@ -1,0 +1,155 @@
+{
+    "deck": [
+        {
+            "name": "Card_2_1_Deferlement, Distortion",
+            "attack": 2,
+            "defense": 1,
+            "competences": 6
+        },
+        {
+            "name": "Card_1_2_Provoc",
+            "attack": 1,
+            "defense": 2,
+            "competences": 1
+        },
+        {
+            "name": "Card_2_5_Provoc, Deferlement",
+            "attack": 2,
+            "defense": 5,
+            "competences": 3
+        },
+        {
+            "name": "Card_6_1_Deferlement",
+            "attack": 6,
+            "defense": 1,
+            "competences": 2
+        },
+        {
+            "name": "Card_3_3_Distortion",
+            "attack": 3,
+            "defense": 3,
+            "competences": 4
+        },
+        {
+            "name": "Card_3_1_Distortion",
+            "attack": 3,
+            "defense": 1,
+            "competences": 4
+        },
+        {
+            "name": "Card_0_8_Deferlement, Distortion",
+            "attack": 0,
+            "defense": 8,
+            "competences": 6
+        },
+        {
+            "name": "Card_2_11_0",
+            "attack": 2,
+            "defense": 11,
+            "competences": 0
+        },
+        {
+            "name": "Card_4_5_Provoc, Distortion",
+            "attack": 4,
+            "defense": 5,
+            "competences": 5
+        },
+        {
+            "name": "Card_2_3_Distortion",
+            "attack": 2,
+            "defense": 3,
+            "competences": 4
+        },
+        {
+            "name": "Card_3_7_Provoc",
+            "attack": 3,
+            "defense": 7,
+            "competences": 1
+        },
+        {
+            "name": "Card_7_2_Provoc, Deferlement",
+            "attack": 7,
+            "defense": 2,
+            "competences": 3
+        },
+        {
+            "name": "Card_6_1_Deferlement, Distortion",
+            "attack": 6,
+            "defense": 1,
+            "competences": 6
+        },
+        {
+            "name": "Card_5_4_Provoc",
+            "attack": 5,
+            "defense": 4,
+            "competences": 1
+        },
+        {
+            "name": "Card_5_4_Deferlement",
+            "attack": 5,
+            "defense": 4,
+            "competences": 2
+        },
+        {
+            "name": "Card_3_1_Deferlement",
+            "attack": 3,
+            "defense": 1,
+            "competences": 2
+        },
+        {
+            "name": "Card_7_2_Provoc",
+            "attack": 7,
+            "defense": 2,
+            "competences": 1
+        },
+        {
+            "name": "Card_0_6_Provoc, Deferlement",
+            "attack": 0,
+            "defense": 6,
+            "competences": 3
+        },
+        {
+            "name": "Card_0_3_Provoc, Deferlement, Distortion",
+            "attack": 0,
+            "defense": 3,
+            "competences": 7
+        },
+        {
+            "name": "Card_0_6_Provoc, Distortion",
+            "attack": 0,
+            "defense": 6,
+            "competences": 5
+        },
+        {
+            "name": "Card_2_1_Provoc, Deferlement",
+            "attack": 2,
+            "defense": 1,
+            "competences": 3
+        },
+        {
+            "name": "Card_4_3_Deferlement, Distortion",
+            "attack": 4,
+            "defense": 3,
+            "competences": 6
+        },
+        {
+            "name": "Card_6_5_Deferlement",
+            "attack": 6,
+            "defense": 5,
+            "competences": 2
+        },
+        {
+            "name": "Card_4_3_Deferlement",
+            "attack": 4,
+            "defense": 3,
+            "competences": 2
+        },
+        {
+            "name": "Card_5_2_Distortion",
+            "attack": 5,
+            "defense": 2,
+            "competences": 4
+        }
+    ],
+    "name": ""
+}

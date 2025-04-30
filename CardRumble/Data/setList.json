@@ -1,1 +1,2714 @@
-[{"attack":0,"defense":1,"name":"Vanilla(0,1)"},{"attack":0,"defense":2,"name":"Vanilla(0,2)"},{"attack":0,"defense":3,"name":"Vanilla(0,3)"},{"attack":0,"defense":4,"name":"Vanilla(0,4)"},{"attack":0,"defense":5,"name":"Vanilla(0,5)"},{"attack":0,"defense":6,"name":"Vanilla(0,6)"},{"attack":0,"defense":7,"name":"Vanilla(0,7)"},{"attack":0,"defense":8,"name":"Vanilla(0,8)"},{"attack":0,"defense":9,"name":"Vanilla(0,9)"},{"attack":0,"defense":10,"name":"Vanilla(0,10)"},{"attack":0,"defense":11,"name":"Vanilla(0,11)"},{"attack":0,"defense":12,"name":"Vanilla(0,12)"},{"attack":0,"defense":13,"name":"Vanilla(0,13)"},{"attack":1,"defense":1,"name":"Vanilla(1,1)"},{"attack":1,"defense":2,"name":"Vanilla(1,2)"},{"attack":1,"defense":3,"name":"Vanilla(1,3)"},{"attack":1,"defense":4,"name":"Vanilla(1,4)"},{"attack":1,"defense":5,"name":"Vanilla(1,5)"},{"attack":1,"defense":6,"name":"Vanilla(1,6)"},{"attack":1,"defense":7,"name":"Vanilla(1,7)"},{"attack":1,"defense":8,"name":"Vanilla(1,8)"},{"attack":1,"defense":9,"name":"Vanilla(1,9)"},{"attack":1,"defense":10,"name":"Vanilla(1,10)"},{"attack":1,"defense":11,"name":"Vanilla(1,11)"},{"attack":1,"defense":12,"name":"Vanilla(1,12)"},{"attack":2,"defense":1,"name":"Vanilla(2,1)"},{"attack":2,"defense":2,"name":"Vanilla(2,2)"},{"attack":2,"defense":3,"name":"Vanilla(2,3)"},{"attack":2,"defense":4,"name":"Vanilla(2,4)"},{"attack":2,"defense":5,"name":"Vanilla(2,5)"},{"attack":2,"defense":6,"name":"Vanilla(2,6)"},{"attack":2,"defense":7,"name":"Vanilla(2,7)"},{"attack":2,"defense":8,"name":"Vanilla(2,8)"},{"attack":2,"defense":9,"name":"Vanilla(2,9)"},{"attack":2,"defense":10,"name":"Vanilla(2,10)"},{"attack":2,"defense":11,"name":"Vanilla(2,11)"},{"attack":3,"defense":1,"name":"Vanilla(3,1)"},{"attack":3,"defense":2,"name":"Vanilla(3,2)"},{"attack":3,"defense":3,"name":"Vanilla(3,3)"},{"attack":3,"defense":4,"name":"Vanilla(3,4)"},{"attack":3,"defense":5,"name":"Vanilla(3,5)"},{"attack":3,"defense":6,"name":"Vanilla(3,6)"},{"attack":3,"defense":7,"name":"Vanilla(3,7)"},{"attack":3,"defense":8,"name":"Vanilla(3,8)"},{"attack":3,"defense":9,"name":"Vanilla(3,9)"},{"attack":3,"defense":10,"name":"Vanilla(3,10)"},{"attack":4,"defense":1,"name":"Vanilla(4,1)"},{"attack":4,"defense":2,"name":"Vanilla(4,2)"},{"attack":4,"defense":3,"name":"Vanilla(4,3)"},{"attack":4,"defense":4,"name":"Vanilla(4,4)"},{"attack":4,"defense":5,"name":"Vanilla(4,5)"},{"attack":4,"defense":6,"name":"Vanilla(4,6)"},{"attack":4,"defense":7,"name":"Vanilla(4,7)"},{"attack":4,"defense":8,"name":"Vanilla(4,8)"},{"attack":4,"defense":9,"name":"Vanilla(4,9)"},{"attack":5,"defense":1,"name":"Vanilla(5,1)"},{"attack":5,"defense":2,"name":"Vanilla(5,2)"},{"attack":5,"defense":3,"name":"Vanilla(5,3)"},{"attack":5,"defense":4,"name":"Vanilla(5,4)"},{"attack":5,"defense":5,"name":"Vanilla(5,5)"},{"attack":5,"defense":6,"name":"Vanilla(5,6)"},{"attack":5,"defense":7,"name":"Vanilla(5,7)"},{"attack":5,"defense":8,"name":"Vanilla(5,8)"},{"attack":6,"defense":1,"name":"Vanilla(6,1)"},{"attack":6,"defense":2,"name":"Vanilla(6,2)"},{"attack":6,"defense":3,"name":"Vanilla(6,3)"},{"attack":6,"defense":4,"name":"Vanilla(6,4)"},{"attack":6,"defense":5,"name":"Vanilla(6,5)"},{"attack":6,"defense":6,"name":"Vanilla(6,6)"},{"attack":6,"defense":7,"name":"Vanilla(6,7)"},{"attack":7,"defense":1,"name":"Vanilla(7,1)"},{"attack":7,"defense":2,"name":"Vanilla(7,2)"},{"attack":7,"defense":3,"name":"Vanilla(7,3)"},{"attack":7,"defense":4,"name":"Vanilla(7,4)"},{"attack":7,"defense":5,"name":"Vanilla(7,5)"},{"attack":7,"defense":6,"name":"Vanilla(7,6)"},{"attack":8,"defense":1,"name":"Vanilla(8,1)"},{"attack":8,"defense":2,"name":"Vanilla(8,2)"},{"attack":8,"defense":3,"name":"Vanilla(8,3)"},{"attack":8,"defense":4,"name":"Vanilla(8,4)"},{"attack":8,"defense":5,"name":"Vanilla(8,5)"},{"attack":9,"defense":1,"name":"Vanilla(9,1)"},{"attack":9,"defense":2,"name":"Vanilla(9,2)"},{"attack":9,"defense":3,"name":"Vanilla(9,3)"},{"attack":9,"defense":4,"name":"Vanilla(9,4)"},{"attack":10,"defense":1,"name":"Vanilla(10,1)"},{"attack":10,"defense":2,"name":"Vanilla(10,2)"},{"attack":10,"defense":3,"name":"Vanilla(10,3)"},{"attack":11,"defense":1,"name":"Vanilla(11,1)"},{"attack":11,"defense":2,"name":"Vanilla(11,2)"},{"attack":12,"defense":1,"name":"Vanilla(12,1)"}]
+[
+  {
+    "attack": 0,
+    "competences": 0,
+    "defense": 1,
+    "name": "Vanilla(0,1)"
+  },
+  {
+    "attack": 0,
+    "competences": 1,
+    "defense": 1,
+    "name": "Taunt(0,1)"
+  },
+  {
+    "attack": 0,
+    "competences": 2,
+    "defense": 1,
+    "name": "Trample(0,1)"
+  },
+  {
+    "attack": 0,
+    "competences": 4,
+    "defense": 1,
+    "name": "Flying(0,1)"
+  },
+  {
+    "attack": 0,
+    "competences": 3,
+    "defense": 1,
+    "name": "TauntTrample(0,1)"
+  },
+  {
+    "attack": 0,
+    "competences": 6,
+    "defense": 1,
+    "name": "TrampleFlying(0,1)"
+  },
+  {
+    "attack": 0,
+    "competences": 5,
+    "defense": 1,
+    "name": "TauntFlying(0,1)"
+  },
+  {
+    "attack": 0,
+    "competences": 7,
+    "defense": 1,
+    "name": "TauntTrampleFlying(0,1)"
+  },
+  {
+    "attack": 0,
+    "competences": 0,
+    "defense": 2,
+    "name": "Vanilla(0,2)"
+  },
+  {
+    "attack": 0,
+    "competences": 1,
+    "defense": 2,
+    "name": "Taunt(0,2)"
+  },
+  {
+    "attack": 0,
+    "competences": 2,
+    "defense": 2,
+    "name": "Trample(0,2)"
+  },
+  {
+    "attack": 0,
+    "competences": 4,
+    "defense": 2,
+    "name": "Flying(0,2)"
+  },
+  {
+    "attack": 0,
+    "competences": 3,
+    "defense": 2,
+    "name": "TauntTrample(0,2)"
+  },
+  {
+    "attack": 0,
+    "competences": 6,
+    "defense": 2,
+    "name": "TrampleFlying(0,2)"
+  },
+  {
+    "attack": 0,
+    "competences": 5,
+    "defense": 2,
+    "name": "TauntFlying(0,2)"
+  },
+  {
+    "attack": 0,
+    "competences": 7,
+    "defense": 2,
+    "name": "TauntTrampleFlying(0,2)"
+  },
+  {
+    "attack": 0,
+    "competences": 0,
+    "defense": 3,
+    "name": "Vanilla(0,3)"
+  },
+  {
+    "attack": 0,
+    "competences": 1,
+    "defense": 3,
+    "name": "Taunt(0,3)"
+  },
+  {
+    "attack": 0,
+    "competences": 2,
+    "defense": 3,
+    "name": "Trample(0,3)"
+  },
+  {
+    "attack": 0,
+    "competences": 4,
+    "defense": 3,
+    "name": "Flying(0,3)"
+  },
+  {
+    "attack": 0,
+    "competences": 3,
+    "defense": 3,
+    "name": "TauntTrample(0,3)"
+  },
+  {
+    "attack": 0,
+    "competences": 6,
+    "defense": 3,
+    "name": "TrampleFlying(0,3)"
+  },
+  {
+    "attack": 0,
+    "competences": 5,
+    "defense": 3,
+    "name": "TauntFlying(0,3)"
+  },
+  {
+    "attack": 0,
+    "competences": 7,
+    "defense": 3,
+    "name": "TauntTrampleFlying(0,3)"
+  },
+  {
+    "attack": 0,
+    "competences": 0,
+    "defense": 4,
+    "name": "Vanilla(0,4)"
+  },
+  {
+    "attack": 0,
+    "competences": 1,
+    "defense": 4,
+    "name": "Taunt(0,4)"
+  },
+  {
+    "attack": 0,
+    "competences": 2,
+    "defense": 4,
+    "name": "Trample(0,4)"
+  },
+  {
+    "attack": 0,
+    "competences": 4,
+    "defense": 4,
+    "name": "Flying(0,4)"
+  },
+  {
+    "attack": 0,
+    "competences": 3,
+    "defense": 4,
+    "name": "TauntTrample(0,4)"
+  },
+  {
+    "attack": 0,
+    "competences": 6,
+    "defense": 4,
+    "name": "TrampleFlying(0,4)"
+  },
+  {
+    "attack": 0,
+    "competences": 5,
+    "defense": 4,
+    "name": "TauntFlying(0,4)"
+  },
+  {
+    "attack": 0,
+    "competences": 7,
+    "defense": 4,
+    "name": "TauntTrampleFlying(0,4)"
+  },
+  {
+    "attack": 0,
+    "competences": 0,
+    "defense": 5,
+    "name": "Vanilla(0,5)"
+  },
+  {
+    "attack": 0,
+    "competences": 1,
+    "defense": 5,
+    "name": "Taunt(0,5)"
+  },
+  {
+    "attack": 0,
+    "competences": 2,
+    "defense": 5,
+    "name": "Trample(0,5)"
+  },
+  {
+    "attack": 0,
+    "competences": 4,
+    "defense": 5,
+    "name": "Flying(0,5)"
+  },
+  {
+    "attack": 0,
+    "competences": 3,
+    "defense": 5,
+    "name": "TauntTrample(0,5)"
+  },
+  {
+    "attack": 0,
+    "competences": 6,
+    "defense": 5,
+    "name": "TrampleFlying(0,5)"
+  },
+  {
+    "attack": 0,
+    "competences": 5,
+    "defense": 5,
+    "name": "TauntFlying(0,5)"
+  },
+  {
+    "attack": 0,
+    "competences": 7,
+    "defense": 5,
+    "name": "TauntTrampleFlying(0,5)"
+  },
+  {
+    "attack": 0,
+    "competences": 0,
+    "defense": 6,
+    "name": "Vanilla(0,6)"
+  },
+  {
+    "attack": 0,
+    "competences": 1,
+    "defense": 6,
+    "name": "Taunt(0,6)"
+  },
+  {
+    "attack": 0,
+    "competences": 2,
+    "defense": 6,
+    "name": "Trample(0,6)"
+  },
+  {
+    "attack": 0,
+    "competences": 4,
+    "defense": 6,
+    "name": "Flying(0,6)"
+  },
+  {
+    "attack": 0,
+    "competences": 3,
+    "defense": 6,
+    "name": "TauntTrample(0,6)"
+  },
+  {
+    "attack": 0,
+    "competences": 6,
+    "defense": 6,
+    "name": "TrampleFlying(0,6)"
+  },
+  {
+    "attack": 0,
+    "competences": 5,
+    "defense": 6,
+    "name": "TauntFlying(0,6)"
+  },
+  {
+    "attack": 0,
+    "competences": 7,
+    "defense": 6,
+    "name": "TauntTrampleFlying(0,6)"
+  },
+  {
+    "attack": 0,
+    "competences": 0,
+    "defense": 7,
+    "name": "Vanilla(0,7)"
+  },
+  {
+    "attack": 0,
+    "competences": 1,
+    "defense": 7,
+    "name": "Taunt(0,7)"
+  },
+  {
+    "attack": 0,
+    "competences": 2,
+    "defense": 7,
+    "name": "Trample(0,7)"
+  },
+  {
+    "attack": 0,
+    "competences": 4,
+    "defense": 7,
+    "name": "Flying(0,7)"
+  },
+  {
+    "attack": 0,
+    "competences": 3,
+    "defense": 7,
+    "name": "TauntTrample(0,7)"
+  },
+  {
+    "attack": 0,
+    "competences": 6,
+    "defense": 7,
+    "name": "TrampleFlying(0,7)"
+  },
+  {
+    "attack": 0,
+    "competences": 5,
+    "defense": 7,
+    "name": "TauntFlying(0,7)"
+  },
+  {
+    "attack": 0,
+    "competences": 7,
+    "defense": 7,
+    "name": "TauntTrampleFlying(0,7)"
+  },
+  {
+    "attack": 0,
+    "competences": 0,
+    "defense": 8,
+    "name": "Vanilla(0,8)"
+  },
+  {
+    "attack": 0,
+    "competences": 1,
+    "defense": 8,
+    "name": "Taunt(0,8)"
+  },
+  {
+    "attack": 0,
+    "competences": 2,
+    "defense": 8,
+    "name": "Trample(0,8)"
+  },
+  {
+    "attack": 0,
+    "competences": 4,
+    "defense": 8,
+    "name": "Flying(0,8)"
+  },
+  {
+    "attack": 0,
+    "competences": 3,
+    "defense": 8,
+    "name": "TauntTrample(0,8)"
+  },
+  {
+    "attack": 0,
+    "competences": 6,
+    "defense": 8,
+    "name": "TrampleFlying(0,8)"
+  },
+  {
+    "attack": 0,
+    "competences": 5,
+    "defense": 8,
+    "name": "TauntFlying(0,8)"
+  },
+  {
+    "attack": 0,
+    "competences": 0,
+    "defense": 9,
+    "name": "Vanilla(0,9)"
+  },
+  {
+    "attack": 0,
+    "competences": 1,
+    "defense": 9,
+    "name": "Taunt(0,9)"
+  },
+  {
+    "attack": 0,
+    "competences": 2,
+    "defense": 9,
+    "name": "Trample(0,9)"
+  },
+  {
+    "attack": 0,
+    "competences": 4,
+    "defense": 9,
+    "name": "Flying(0,9)"
+  },
+  {
+    "attack": 0,
+    "competences": 3,
+    "defense": 9,
+    "name": "TauntTrample(0,9)"
+  },
+  {
+    "attack": 0,
+    "competences": 6,
+    "defense": 9,
+    "name": "TrampleFlying(0,9)"
+  },
+  {
+    "attack": 0,
+    "competences": 5,
+    "defense": 9,
+    "name": "TauntFlying(0,9)"
+  },
+  {
+    "attack": 0,
+    "competences": 0,
+    "defense": 10,
+    "name": "Vanilla(0,10)"
+  },
+  {
+    "attack": 0,
+    "competences": 1,
+    "defense": 10,
+    "name": "Taunt(0,10)"
+  },
+  {
+    "attack": 0,
+    "competences": 2,
+    "defense": 10,
+    "name": "Trample(0,10)"
+  },
+  {
+    "attack": 0,
+    "competences": 4,
+    "defense": 10,
+    "name": "Flying(0,10)"
+  },
+  {
+    "attack": 0,
+    "competences": 0,
+    "defense": 11,
+    "name": "Vanilla(0,11)"
+  },
+  {
+    "attack": 0,
+    "competences": 1,
+    "defense": 11,
+    "name": "Taunt(0,11)"
+  },
+  {
+    "attack": 0,
+    "competences": 2,
+    "defense": 11,
+    "name": "Trample(0,11)"
+  },
+  {
+    "attack": 0,
+    "competences": 4,
+    "defense": 11,
+    "name": "Flying(0,11)"
+  },
+  {
+    "attack": 0,
+    "competences": 0,
+    "defense": 12,
+    "name": "Vanilla(0,12)"
+  },
+  {
+    "attack": 0,
+    "competences": 0,
+    "defense": 13,
+    "name": "Vanilla(0,13)"
+  },
+  {
+    "attack": 1,
+    "competences": 0,
+    "defense": 1,
+    "name": "Vanilla(1,1)"
+  },
+  {
+    "attack": 1,
+    "competences": 1,
+    "defense": 1,
+    "name": "Taunt(1,1)"
+  },
+  {
+    "attack": 1,
+    "competences": 2,
+    "defense": 1,
+    "name": "Trample(1,1)"
+  },
+  {
+    "attack": 1,
+    "competences": 4,
+    "defense": 1,
+    "name": "Flying(1,1)"
+  },
+  {
+    "attack": 1,
+    "competences": 3,
+    "defense": 1,
+    "name": "TauntTrample(1,1)"
+  },
+  {
+    "attack": 1,
+    "competences": 6,
+    "defense": 1,
+    "name": "TrampleFlying(1,1)"
+  },
+  {
+    "attack": 1,
+    "competences": 5,
+    "defense": 1,
+    "name": "TauntFlying(1,1)"
+  },
+  {
+    "attack": 1,
+    "competences": 7,
+    "defense": 1,
+    "name": "TauntTrampleFlying(1,1)"
+  },
+  {
+    "attack": 1,
+    "competences": 0,
+    "defense": 2,
+    "name": "Vanilla(1,2)"
+  },
+  {
+    "attack": 1,
+    "competences": 1,
+    "defense": 2,
+    "name": "Taunt(1,2)"
+  },
+  {
+    "attack": 1,
+    "competences": 2,
+    "defense": 2,
+    "name": "Trample(1,2)"
+  },
+  {
+    "attack": 1,
+    "competences": 4,
+    "defense": 2,
+    "name": "Flying(1,2)"
+  },
+  {
+    "attack": 1,
+    "competences": 3,
+    "defense": 2,
+    "name": "TauntTrample(1,2)"
+  },
+  {
+    "attack": 1,
+    "competences": 6,
+    "defense": 2,
+    "name": "TrampleFlying(1,2)"
+  },
+  {
+    "attack": 1,
+    "competences": 5,
+    "defense": 2,
+    "name": "TauntFlying(1,2)"
+  },
+  {
+    "attack": 1,
+    "competences": 7,
+    "defense": 2,
+    "name": "TauntTrampleFlying(1,2)"
+  },
+  {
+    "attack": 1,
+    "competences": 0,
+    "defense": 3,
+    "name": "Vanilla(1,3)"
+  },
+  {
+    "attack": 1,
+    "competences": 1,
+    "defense": 3,
+    "name": "Taunt(1,3)"
+  },
+  {
+    "attack": 1,
+    "competences": 2,
+    "defense": 3,
+    "name": "Trample(1,3)"
+  },
+  {
+    "attack": 1,
+    "competences": 4,
+    "defense": 3,
+    "name": "Flying(1,3)"
+  },
+  {
+    "attack": 1,
+    "competences": 3,
+    "defense": 3,
+    "name": "TauntTrample(1,3)"
+  },
+  {
+    "attack": 1,
+    "competences": 6,
+    "defense": 3,
+    "name": "TrampleFlying(1,3)"
+  },
+  {
+    "attack": 1,
+    "competences": 5,
+    "defense": 3,
+    "name": "TauntFlying(1,3)"
+  },
+  {
+    "attack": 1,
+    "competences": 7,
+    "defense": 3,
+    "name": "TauntTrampleFlying(1,3)"
+  },
+  {
+    "attack": 1,
+    "competences": 0,
+    "defense": 4,
+    "name": "Vanilla(1,4)"
+  },
+  {
+    "attack": 1,
+    "competences": 1,
+    "defense": 4,
+    "name": "Taunt(1,4)"
+  },
+  {
+    "attack": 1,
+    "competences": 2,
+    "defense": 4,
+    "name": "Trample(1,4)"
+  },
+  {
+    "attack": 1,
+    "competences": 4,
+    "defense": 4,
+    "name": "Flying(1,4)"
+  },
+  {
+    "attack": 1,
+    "competences": 3,
+    "defense": 4,
+    "name": "TauntTrample(1,4)"
+  },
+  {
+    "attack": 1,
+    "competences": 6,
+    "defense": 4,
+    "name": "TrampleFlying(1,4)"
+  },
+  {
+    "attack": 1,
+    "competences": 5,
+    "defense": 4,
+    "name": "TauntFlying(1,4)"
+  },
+  {
+    "attack": 1,
+    "competences": 7,
+    "defense": 4,
+    "name": "TauntTrampleFlying(1,4)"
+  },
+  {
+    "attack": 1,
+    "competences": 0,
+    "defense": 5,
+    "name": "Vanilla(1,5)"
+  },
+  {
+    "attack": 1,
+    "competences": 1,
+    "defense": 5,
+    "name": "Taunt(1,5)"
+  },
+  {
+    "attack": 1,
+    "competences": 2,
+    "defense": 5,
+    "name": "Trample(1,5)"
+  },
+  {
+    "attack": 1,
+    "competences": 4,
+    "defense": 5,
+    "name": "Flying(1,5)"
+  },
+  {
+    "attack": 1,
+    "competences": 3,
+    "defense": 5,
+    "name": "TauntTrample(1,5)"
+  },
+  {
+    "attack": 1,
+    "competences": 6,
+    "defense": 5,
+    "name": "TrampleFlying(1,5)"
+  },
+  {
+    "attack": 1,
+    "competences": 5,
+    "defense": 5,
+    "name": "TauntFlying(1,5)"
+  },
+  {
+    "attack": 1,
+    "competences": 7,
+    "defense": 5,
+    "name": "TauntTrampleFlying(1,5)"
+  },
+  {
+    "attack": 1,
+    "competences": 0,
+    "defense": 6,
+    "name": "Vanilla(1,6)"
+  },
+  {
+    "attack": 1,
+    "competences": 1,
+    "defense": 6,
+    "name": "Taunt(1,6)"
+  },
+  {
+    "attack": 1,
+    "competences": 2,
+    "defense": 6,
+    "name": "Trample(1,6)"
+  },
+  {
+    "attack": 1,
+    "competences": 4,
+    "defense": 6,
+    "name": "Flying(1,6)"
+  },
+  {
+    "attack": 1,
+    "competences": 3,
+    "defense": 6,
+    "name": "TauntTrample(1,6)"
+  },
+  {
+    "attack": 1,
+    "competences": 6,
+    "defense": 6,
+    "name": "TrampleFlying(1,6)"
+  },
+  {
+    "attack": 1,
+    "competences": 5,
+    "defense": 6,
+    "name": "TauntFlying(1,6)"
+  },
+  {
+    "attack": 1,
+    "competences": 7,
+    "defense": 6,
+    "name": "TauntTrampleFlying(1,6)"
+  },
+  {
+    "attack": 1,
+    "competences": 0,
+    "defense": 7,
+    "name": "Vanilla(1,7)"
+  },
+  {
+    "attack": 1,
+    "competences": 1,
+    "defense": 7,
+    "name": "Taunt(1,7)"
+  },
+  {
+    "attack": 1,
+    "competences": 2,
+    "defense": 7,
+    "name": "Trample(1,7)"
+  },
+  {
+    "attack": 1,
+    "competences": 4,
+    "defense": 7,
+    "name": "Flying(1,7)"
+  },
+  {
+    "attack": 1,
+    "competences": 3,
+    "defense": 7,
+    "name": "TauntTrample(1,7)"
+  },
+  {
+    "attack": 1,
+    "competences": 6,
+    "defense": 7,
+    "name": "TrampleFlying(1,7)"
+  },
+  {
+    "attack": 1,
+    "competences": 5,
+    "defense": 7,
+    "name": "TauntFlying(1,7)"
+  },
+  {
+    "attack": 1,
+    "competences": 0,
+    "defense": 8,
+    "name": "Vanilla(1,8)"
+  },
+  {
+    "attack": 1,
+    "competences": 1,
+    "defense": 8,
+    "name": "Taunt(1,8)"
+  },
+  {
+    "attack": 1,
+    "competences": 2,
+    "defense": 8,
+    "name": "Trample(1,8)"
+  },
+  {
+    "attack": 1,
+    "competences": 4,
+    "defense": 8,
+    "name": "Flying(1,8)"
+  },
+  {
+    "attack": 1,
+    "competences": 3,
+    "defense": 8,
+    "name": "TauntTrample(1,8)"
+  },
+  {
+    "attack": 1,
+    "competences": 6,
+    "defense": 8,
+    "name": "TrampleFlying(1,8)"
+  },
+  {
+    "attack": 1,
+    "competences": 5,
+    "defense": 8,
+    "name": "TauntFlying(1,8)"
+  },
+  {
+    "attack": 1,
+    "competences": 0,
+    "defense": 9,
+    "name": "Vanilla(1,9)"
+  },
+  {
+    "attack": 1,
+    "competences": 1,
+    "defense": 9,
+    "name": "Taunt(1,9)"
+  },
+  {
+    "attack": 1,
+    "competences": 2,
+    "defense": 9,
+    "name": "Trample(1,9)"
+  },
+  {
+    "attack": 1,
+    "competences": 4,
+    "defense": 9,
+    "name": "Flying(1,9)"
+  },
+  {
+    "attack": 1,
+    "competences": 0,
+    "defense": 10,
+    "name": "Vanilla(1,10)"
+  },
+  {
+    "attack": 1,
+    "competences": 1,
+    "defense": 10,
+    "name": "Taunt(1,10)"
+  },
+  {
+    "attack": 1,
+    "competences": 2,
+    "defense": 10,
+    "name": "Trample(1,10)"
+  },
+  {
+    "attack": 1,
+    "competences": 4,
+    "defense": 10,
+    "name": "Flying(1,10)"
+  },
+  {
+    "attack": 1,
+    "competences": 0,
+    "defense": 11,
+    "name": "Vanilla(1,11)"
+  },
+  {
+    "attack": 1,
+    "competences": 0,
+    "defense": 12,
+    "name": "Vanilla(1,12)"
+  },
+  {
+    "attack": 2,
+    "competences": 0,
+    "defense": 1,
+    "name": "Vanilla(2,1)"
+  },
+  {
+    "attack": 2,
+    "competences": 1,
+    "defense": 1,
+    "name": "Taunt(2,1)"
+  },
+  {
+    "attack": 2,
+    "competences": 2,
+    "defense": 1,
+    "name": "Trample(2,1)"
+  },
+  {
+    "attack": 2,
+    "competences": 4,
+    "defense": 1,
+    "name": "Flying(2,1)"
+  },
+  {
+    "attack": 2,
+    "competences": 3,
+    "defense": 1,
+    "name": "TauntTrample(2,1)"
+  },
+  {
+    "attack": 2,
+    "competences": 6,
+    "defense": 1,
+    "name": "TrampleFlying(2,1)"
+  },
+  {
+    "attack": 2,
+    "competences": 5,
+    "defense": 1,
+    "name": "TauntFlying(2,1)"
+  },
+  {
+    "attack": 2,
+    "competences": 7,
+    "defense": 1,
+    "name": "TauntTrampleFlying(2,1)"
+  },
+  {
+    "attack": 2,
+    "competences": 0,
+    "defense": 2,
+    "name": "Vanilla(2,2)"
+  },
+  {
+    "attack": 2,
+    "competences": 1,
+    "defense": 2,
+    "name": "Taunt(2,2)"
+  },
+  {
+    "attack": 2,
+    "competences": 2,
+    "defense": 2,
+    "name": "Trample(2,2)"
+  },
+  {
+    "attack": 2,
+    "competences": 4,
+    "defense": 2,
+    "name": "Flying(2,2)"
+  },
+  {
+    "attack": 2,
+    "competences": 3,
+    "defense": 2,
+    "name": "TauntTrample(2,2)"
+  },
+  {
+    "attack": 2,
+    "competences": 6,
+    "defense": 2,
+    "name": "TrampleFlying(2,2)"
+  },
+  {
+    "attack": 2,
+    "competences": 5,
+    "defense": 2,
+    "name": "TauntFlying(2,2)"
+  },
+  {
+    "attack": 2,
+    "competences": 7,
+    "defense": 2,
+    "name": "TauntTrampleFlying(2,2)"
+  },
+  {
+    "attack": 2,
+    "competences": 0,
+    "defense": 3,
+    "name": "Vanilla(2,3)"
+  },
+  {
+    "attack": 2,
+    "competences": 1,
+    "defense": 3,
+    "name": "Taunt(2,3)"
+  },
+  {
+    "attack": 2,
+    "competences": 2,
+    "defense": 3,
+    "name": "Trample(2,3)"
+  },
+  {
+    "attack": 2,
+    "competences": 4,
+    "defense": 3,
+    "name": "Flying(2,3)"
+  },
+  {
+    "attack": 2,
+    "competences": 3,
+    "defense": 3,
+    "name": "TauntTrample(2,3)"
+  },
+  {
+    "attack": 2,
+    "competences": 6,
+    "defense": 3,
+    "name": "TrampleFlying(2,3)"
+  },
+  {
+    "attack": 2,
+    "competences": 5,
+    "defense": 3,
+    "name": "TauntFlying(2,3)"
+  },
+  {
+    "attack": 2,
+    "competences": 7,
+    "defense": 3,
+    "name": "TauntTrampleFlying(2,3)"
+  },
+  {
+    "attack": 2,
+    "competences": 0,
+    "defense": 4,
+    "name": "Vanilla(2,4)"
+  },
+  {
+    "attack": 2,
+    "competences": 1,
+    "defense": 4,
+    "name": "Taunt(2,4)"
+  },
+  {
+    "attack": 2,
+    "competences": 2,
+    "defense": 4,
+    "name": "Trample(2,4)"
+  },
+  {
+    "attack": 2,
+    "competences": 4,
+    "defense": 4,
+    "name": "Flying(2,4)"
+  },
+  {
+    "attack": 2,
+    "competences": 3,
+    "defense": 4,
+    "name": "TauntTrample(2,4)"
+  },
+  {
+    "attack": 2,
+    "competences": 6,
+    "defense": 4,
+    "name": "TrampleFlying(2,4)"
+  },
+  {
+    "attack": 2,
+    "competences": 5,
+    "defense": 4,
+    "name": "TauntFlying(2,4)"
+  },
+  {
+    "attack": 2,
+    "competences": 7,
+    "defense": 4,
+    "name": "TauntTrampleFlying(2,4)"
+  },
+  {
+    "attack": 2,
+    "competences": 0,
+    "defense": 5,
+    "name": "Vanilla(2,5)"
+  },
+  {
+    "attack": 2,
+    "competences": 1,
+    "defense": 5,
+    "name": "Taunt(2,5)"
+  },
+  {
+    "attack": 2,
+    "competences": 2,
+    "defense": 5,
+    "name": "Trample(2,5)"
+  },
+  {
+    "attack": 2,
+    "competences": 4,
+    "defense": 5,
+    "name": "Flying(2,5)"
+  },
+  {
+    "attack": 2,
+    "competences": 3,
+    "defense": 5,
+    "name": "TauntTrample(2,5)"
+  },
+  {
+    "attack": 2,
+    "competences": 6,
+    "defense": 5,
+    "name": "TrampleFlying(2,5)"
+  },
+  {
+    "attack": 2,
+    "competences": 5,
+    "defense": 5,
+    "name": "TauntFlying(2,5)"
+  },
+  {
+    "attack": 2,
+    "competences": 7,
+    "defense": 5,
+    "name": "TauntTrampleFlying(2,5)"
+  },
+  {
+    "attack": 2,
+    "competences": 0,
+    "defense": 6,
+    "name": "Vanilla(2,6)"
+  },
+  {
+    "attack": 2,
+    "competences": 1,
+    "defense": 6,
+    "name": "Taunt(2,6)"
+  },
+  {
+    "attack": 2,
+    "competences": 2,
+    "defense": 6,
+    "name": "Trample(2,6)"
+  },
+  {
+    "attack": 2,
+    "competences": 4,
+    "defense": 6,
+    "name": "Flying(2,6)"
+  },
+  {
+    "attack": 2,
+    "competences": 3,
+    "defense": 6,
+    "name": "TauntTrample(2,6)"
+  },
+  {
+    "attack": 2,
+    "competences": 6,
+    "defense": 6,
+    "name": "TrampleFlying(2,6)"
+  },
+  {
+    "attack": 2,
+    "competences": 5,
+    "defense": 6,
+    "name": "TauntFlying(2,6)"
+  },
+  {
+    "attack": 2,
+    "competences": 0,
+    "defense": 7,
+    "name": "Vanilla(2,7)"
+  },
+  {
+    "attack": 2,
+    "competences": 1,
+    "defense": 7,
+    "name": "Taunt(2,7)"
+  },
+  {
+    "attack": 2,
+    "competences": 2,
+    "defense": 7,
+    "name": "Trample(2,7)"
+  },
+  {
+    "attack": 2,
+    "competences": 4,
+    "defense": 7,
+    "name": "Flying(2,7)"
+  },
+  {
+    "attack": 2,
+    "competences": 3,
+    "defense": 7,
+    "name": "TauntTrample(2,7)"
+  },
+  {
+    "attack": 2,
+    "competences": 6,
+    "defense": 7,
+    "name": "TrampleFlying(2,7)"
+  },
+  {
+    "attack": 2,
+    "competences": 5,
+    "defense": 7,
+    "name": "TauntFlying(2,7)"
+  },
+  {
+    "attack": 2,
+    "competences": 0,
+    "defense": 8,
+    "name": "Vanilla(2,8)"
+  },
+  {
+    "attack": 2,
+    "competences": 1,
+    "defense": 8,
+    "name": "Taunt(2,8)"
+  },
+  {
+    "attack": 2,
+    "competences": 2,
+    "defense": 8,
+    "name": "Trample(2,8)"
+  },
+  {
+    "attack": 2,
+    "competences": 4,
+    "defense": 8,
+    "name": "Flying(2,8)"
+  },
+  {
+    "attack": 2,
+    "competences": 0,
+    "defense": 9,
+    "name": "Vanilla(2,9)"
+  },
+  {
+    "attack": 2,
+    "competences": 1,
+    "defense": 9,
+    "name": "Taunt(2,9)"
+  },
+  {
+    "attack": 2,
+    "competences": 2,
+    "defense": 9,
+    "name": "Trample(2,9)"
+  },
+  {
+    "attack": 2,
+    "competences": 4,
+    "defense": 9,
+    "name": "Flying(2,9)"
+  },
+  {
+    "attack": 2,
+    "competences": 0,
+    "defense": 10,
+    "name": "Vanilla(2,10)"
+  },
+  {
+    "attack": 2,
+    "competences": 0,
+    "defense": 11,
+    "name": "Vanilla(2,11)"
+  },
+  {
+    "attack": 3,
+    "competences": 0,
+    "defense": 1,
+    "name": "Vanilla(3,1)"
+  },
+  {
+    "attack": 3,
+    "competences": 1,
+    "defense": 1,
+    "name": "Taunt(3,1)"
+  },
+  {
+    "attack": 3,
+    "competences": 2,
+    "defense": 1,
+    "name": "Trample(3,1)"
+  },
+  {
+    "attack": 3,
+    "competences": 4,
+    "defense": 1,
+    "name": "Flying(3,1)"
+  },
+  {
+    "attack": 3,
+    "competences": 3,
+    "defense": 1,
+    "name": "TauntTrample(3,1)"
+  },
+  {
+    "attack": 3,
+    "competences": 6,
+    "defense": 1,
+    "name": "TrampleFlying(3,1)"
+  },
+  {
+    "attack": 3,
+    "competences": 5,
+    "defense": 1,
+    "name": "TauntFlying(3,1)"
+  },
+  {
+    "attack": 3,
+    "competences": 7,
+    "defense": 1,
+    "name": "TauntTrampleFlying(3,1)"
+  },
+  {
+    "attack": 3,
+    "competences": 0,
+    "defense": 2,
+    "name": "Vanilla(3,2)"
+  },
+  {
+    "attack": 3,
+    "competences": 1,
+    "defense": 2,
+    "name": "Taunt(3,2)"
+  },
+  {
+    "attack": 3,
+    "competences": 2,
+    "defense": 2,
+    "name": "Trample(3,2)"
+  },
+  {
+    "attack": 3,
+    "competences": 4,
+    "defense": 2,
+    "name": "Flying(3,2)"
+  },
+  {
+    "attack": 3,
+    "competences": 3,
+    "defense": 2,
+    "name": "TauntTrample(3,2)"
+  },
+  {
+    "attack": 3,
+    "competences": 6,
+    "defense": 2,
+    "name": "TrampleFlying(3,2)"
+  },
+  {
+    "attack": 3,
+    "competences": 5,
+    "defense": 2,
+    "name": "TauntFlying(3,2)"
+  },
+  {
+    "attack": 3,
+    "competences": 7,
+    "defense": 2,
+    "name": "TauntTrampleFlying(3,2)"
+  },
+  {
+    "attack": 3,
+    "competences": 0,
+    "defense": 3,
+    "name": "Vanilla(3,3)"
+  },
+  {
+    "attack": 3,
+    "competences": 1,
+    "defense": 3,
+    "name": "Taunt(3,3)"
+  },
+  {
+    "attack": 3,
+    "competences": 2,
+    "defense": 3,
+    "name": "Trample(3,3)"
+  },
+  {
+    "attack": 3,
+    "competences": 4,
+    "defense": 3,
+    "name": "Flying(3,3)"
+  },
+  {
+    "attack": 3,
+    "competences": 3,
+    "defense": 3,
+    "name": "TauntTrample(3,3)"
+  },
+  {
+    "attack": 3,
+    "competences": 6,
+    "defense": 3,
+    "name": "TrampleFlying(3,3)"
+  },
+  {
+    "attack": 3,
+    "competences": 5,
+    "defense": 3,
+    "name": "TauntFlying(3,3)"
+  },
+  {
+    "attack": 3,
+    "competences": 7,
+    "defense": 3,
+    "name": "TauntTrampleFlying(3,3)"
+  },
+  {
+    "attack": 3,
+    "competences": 0,
+    "defense": 4,
+    "name": "Vanilla(3,4)"
+  },
+  {
+    "attack": 3,
+    "competences": 1,
+    "defense": 4,
+    "name": "Taunt(3,4)"
+  },
+  {
+    "attack": 3,
+    "competences": 2,
+    "defense": 4,
+    "name": "Trample(3,4)"
+  },
+  {
+    "attack": 3,
+    "competences": 4,
+    "defense": 4,
+    "name": "Flying(3,4)"
+  },
+  {
+    "attack": 3,
+    "competences": 3,
+    "defense": 4,
+    "name": "TauntTrample(3,4)"
+  },
+  {
+    "attack": 3,
+    "competences": 6,
+    "defense": 4,
+    "name": "TrampleFlying(3,4)"
+  },
+  {
+    "attack": 3,
+    "competences": 5,
+    "defense": 4,
+    "name": "TauntFlying(3,4)"
+  },
+  {
+    "attack": 3,
+    "competences": 7,
+    "defense": 4,
+    "name": "TauntTrampleFlying(3,4)"
+  },
+  {
+    "attack": 3,
+    "competences": 0,
+    "defense": 5,
+    "name": "Vanilla(3,5)"
+  },
+  {
+    "attack": 3,
+    "competences": 1,
+    "defense": 5,
+    "name": "Taunt(3,5)"
+  },
+  {
+    "attack": 3,
+    "competences": 2,
+    "defense": 5,
+    "name": "Trample(3,5)"
+  },
+  {
+    "attack": 3,
+    "competences": 4,
+    "defense": 5,
+    "name": "Flying(3,5)"
+  },
+  {
+    "attack": 3,
+    "competences": 3,
+    "defense": 5,
+    "name": "TauntTrample(3,5)"
+  },
+  {
+    "attack": 3,
+    "competences": 6,
+    "defense": 5,
+    "name": "TrampleFlying(3,5)"
+  },
+  {
+    "attack": 3,
+    "competences": 5,
+    "defense": 5,
+    "name": "TauntFlying(3,5)"
+  },
+  {
+    "attack": 3,
+    "competences": 0,
+    "defense": 6,
+    "name": "Vanilla(3,6)"
+  },
+  {
+    "attack": 3,
+    "competences": 1,
+    "defense": 6,
+    "name": "Taunt(3,6)"
+  },
+  {
+    "attack": 3,
+    "competences": 2,
+    "defense": 6,
+    "name": "Trample(3,6)"
+  },
+  {
+    "attack": 3,
+    "competences": 4,
+    "defense": 6,
+    "name": "Flying(3,6)"
+  },
+  {
+    "attack": 3,
+    "competences": 3,
+    "defense": 6,
+    "name": "TauntTrample(3,6)"
+  },
+  {
+    "attack": 3,
+    "competences": 6,
+    "defense": 6,
+    "name": "TrampleFlying(3,6)"
+  },
+  {
+    "attack": 3,
+    "competences": 5,
+    "defense": 6,
+    "name": "TauntFlying(3,6)"
+  },
+  {
+    "attack": 3,
+    "competences": 0,
+    "defense": 7,
+    "name": "Vanilla(3,7)"
+  },
+  {
+    "attack": 3,
+    "competences": 1,
+    "defense": 7,
+    "name": "Taunt(3,7)"
+  },
+  {
+    "attack": 3,
+    "competences": 2,
+    "defense": 7,
+    "name": "Trample(3,7)"
+  },
+  {
+    "attack": 3,
+    "competences": 4,
+    "defense": 7,
+    "name": "Flying(3,7)"
+  },
+  {
+    "attack": 3,
+    "competences": 0,
+    "defense": 8,
+    "name": "Vanilla(3,8)"
+  },
+  {
+    "attack": 3,
+    "competences": 1,
+    "defense": 8,
+    "name": "Taunt(3,8)"
+  },
+  {
+    "attack": 3,
+    "competences": 2,
+    "defense": 8,
+    "name": "Trample(3,8)"
+  },
+  {
+    "attack": 3,
+    "competences": 4,
+    "defense": 8,
+    "name": "Flying(3,8)"
+  },
+  {
+    "attack": 3,
+    "competences": 0,
+    "defense": 9,
+    "name": "Vanilla(3,9)"
+  },
+  {
+    "attack": 3,
+    "competences": 0,
+    "defense": 10,
+    "name": "Vanilla(3,10)"
+  },
+  {
+    "attack": 4,
+    "competences": 0,
+    "defense": 1,
+    "name": "Vanilla(4,1)"
+  },
+  {
+    "attack": 4,
+    "competences": 1,
+    "defense": 1,
+    "name": "Taunt(4,1)"
+  },
+  {
+    "attack": 4,
+    "competences": 2,
+    "defense": 1,
+    "name": "Trample(4,1)"
+  },
+  {
+    "attack": 4,
+    "competences": 4,
+    "defense": 1,
+    "name": "Flying(4,1)"
+  },
+  {
+    "attack": 4,
+    "competences": 3,
+    "defense": 1,
+    "name": "TauntTrample(4,1)"
+  },
+  {
+    "attack": 4,
+    "competences": 6,
+    "defense": 1,
+    "name": "TrampleFlying(4,1)"
+  },
+  {
+    "attack": 4,
+    "competences": 5,
+    "defense": 1,
+    "name": "TauntFlying(4,1)"
+  },
+  {
+    "attack": 4,
+    "competences": 7,
+    "defense": 1,
+    "name": "TauntTrampleFlying(4,1)"
+  },
+  {
+    "attack": 4,
+    "competences": 0,
+    "defense": 2,
+    "name": "Vanilla(4,2)"
+  },
+  {
+    "attack": 4,
+    "competences": 1,
+    "defense": 2,
+    "name": "Taunt(4,2)"
+  },
+  {
+    "attack": 4,
+    "competences": 2,
+    "defense": 2,
+    "name": "Trample(4,2)"
+  },
+  {
+    "attack": 4,
+    "competences": 4,
+    "defense": 2,
+    "name": "Flying(4,2)"
+  },
+  {
+    "attack": 4,
+    "competences": 3,
+    "defense": 2,
+    "name": "TauntTrample(4,2)"
+  },
+  {
+    "attack": 4,
+    "competences": 6,
+    "defense": 2,
+    "name": "TrampleFlying(4,2)"
+  },
+  {
+    "attack": 4,
+    "competences": 5,
+    "defense": 2,
+    "name": "TauntFlying(4,2)"
+  },
+  {
+    "attack": 4,
+    "competences": 7,
+    "defense": 2,
+    "name": "TauntTrampleFlying(4,2)"
+  },
+  {
+    "attack": 4,
+    "competences": 0,
+    "defense": 3,
+    "name": "Vanilla(4,3)"
+  },
+  {
+    "attack": 4,
+    "competences": 1,
+    "defense": 3,
+    "name": "Taunt(4,3)"
+  },
+  {
+    "attack": 4,
+    "competences": 2,
+    "defense": 3,
+    "name": "Trample(4,3)"
+  },
+  {
+    "attack": 4,
+    "competences": 4,
+    "defense": 3,
+    "name": "Flying(4,3)"
+  },
+  {
+    "attack": 4,
+    "competences": 3,
+    "defense": 3,
+    "name": "TauntTrample(4,3)"
+  },
+  {
+    "attack": 4,
+    "competences": 6,
+    "defense": 3,
+    "name": "TrampleFlying(4,3)"
+  },
+  {
+    "attack": 4,
+    "competences": 5,
+    "defense": 3,
+    "name": "TauntFlying(4,3)"
+  },
+  {
+    "attack": 4,
+    "competences": 7,
+    "defense": 3,
+    "name": "TauntTrampleFlying(4,3)"
+  },
+  {
+    "attack": 4,
+    "competences": 0,
+    "defense": 4,
+    "name": "Vanilla(4,4)"
+  },
+  {
+    "attack": 4,
+    "competences": 1,
+    "defense": 4,
+    "name": "Taunt(4,4)"
+  },
+  {
+    "attack": 4,
+    "competences": 2,
+    "defense": 4,
+    "name": "Trample(4,4)"
+  },
+  {
+    "attack": 4,
+    "competences": 4,
+    "defense": 4,
+    "name": "Flying(4,4)"
+  },
+  {
+    "attack": 4,
+    "competences": 3,
+    "defense": 4,
+    "name": "TauntTrample(4,4)"
+  },
+  {
+    "attack": 4,
+    "competences": 6,
+    "defense": 4,
+    "name": "TrampleFlying(4,4)"
+  },
+  {
+    "attack": 4,
+    "competences": 5,
+    "defense": 4,
+    "name": "TauntFlying(4,4)"
+  },
+  {
+    "attack": 4,
+    "competences": 0,
+    "defense": 5,
+    "name": "Vanilla(4,5)"
+  },
+  {
+    "attack": 4,
+    "competences": 1,
+    "defense": 5,
+    "name": "Taunt(4,5)"
+  },
+  {
+    "attack": 4,
+    "competences": 2,
+    "defense": 5,
+    "name": "Trample(4,5)"
+  },
+  {
+    "attack": 4,
+    "competences": 4,
+    "defense": 5,
+    "name": "Flying(4,5)"
+  },
+  {
+    "attack": 4,
+    "competences": 3,
+    "defense": 5,
+    "name": "TauntTrample(4,5)"
+  },
+  {
+    "attack": 4,
+    "competences": 6,
+    "defense": 5,
+    "name": "TrampleFlying(4,5)"
+  },
+  {
+    "attack": 4,
+    "competences": 5,
+    "defense": 5,
+    "name": "TauntFlying(4,5)"
+  },
+  {
+    "attack": 4,
+    "competences": 0,
+    "defense": 6,
+    "name": "Vanilla(4,6)"
+  },
+  {
+    "attack": 4,
+    "competences": 1,
+    "defense": 6,
+    "name": "Taunt(4,6)"
+  },
+  {
+    "attack": 4,
+    "competences": 2,
+    "defense": 6,
+    "name": "Trample(4,6)"
+  },
+  {
+    "attack": 4,
+    "competences": 4,
+    "defense": 6,
+    "name": "Flying(4,6)"
+  },
+  {
+    "attack": 4,
+    "competences": 0,
+    "defense": 7,
+    "name": "Vanilla(4,7)"
+  },
+  {
+    "attack": 4,
+    "competences": 1,
+    "defense": 7,
+    "name": "Taunt(4,7)"
+  },
+  {
+    "attack": 4,
+    "competences": 2,
+    "defense": 7,
+    "name": "Trample(4,7)"
+  },
+  {
+    "attack": 4,
+    "competences": 4,
+    "defense": 7,
+    "name": "Flying(4,7)"
+  },
+  {
+    "attack": 4,
+    "competences": 0,
+    "defense": 8,
+    "name": "Vanilla(4,8)"
+  },
+  {
+    "attack": 4,
+    "competences": 0,
+    "defense": 9,
+    "name": "Vanilla(4,9)"
+  },
+  {
+    "attack": 5,
+    "competences": 0,
+    "defense": 1,
+    "name": "Vanilla(5,1)"
+  },
+  {
+    "attack": 5,
+    "competences": 1,
+    "defense": 1,
+    "name": "Taunt(5,1)"
+  },
+  {
+    "attack": 5,
+    "competences": 2,
+    "defense": 1,
+    "name": "Trample(5,1)"
+  },
+  {
+    "attack": 5,
+    "competences": 4,
+    "defense": 1,
+    "name": "Flying(5,1)"
+  },
+  {
+    "attack": 5,
+    "competences": 3,
+    "defense": 1,
+    "name": "TauntTrample(5,1)"
+  },
+  {
+    "attack": 5,
+    "competences": 6,
+    "defense": 1,
+    "name": "TrampleFlying(5,1)"
+  },
+  {
+    "attack": 5,
+    "competences": 5,
+    "defense": 1,
+    "name": "TauntFlying(5,1)"
+  },
+  {
+    "attack": 5,
+    "competences": 7,
+    "defense": 1,
+    "name": "TauntTrampleFlying(5,1)"
+  },
+  {
+    "attack": 5,
+    "competences": 0,
+    "defense": 2,
+    "name": "Vanilla(5,2)"
+  },
+  {
+    "attack": 5,
+    "competences": 1,
+    "defense": 2,
+    "name": "Taunt(5,2)"
+  },
+  {
+    "attack": 5,
+    "competences": 2,
+    "defense": 2,
+    "name": "Trample(5,2)"
+  },
+  {
+    "attack": 5,
+    "competences": 4,
+    "defense": 2,
+    "name": "Flying(5,2)"
+  },
+  {
+    "attack": 5,
+    "competences": 3,
+    "defense": 2,
+    "name": "TauntTrample(5,2)"
+  },
+  {
+    "attack": 5,
+    "competences": 6,
+    "defense": 2,
+    "name": "TrampleFlying(5,2)"
+  },
+  {
+    "attack": 5,
+    "competences": 5,
+    "defense": 2,
+    "name": "TauntFlying(5,2)"
+  },
+  {
+    "attack": 5,
+    "competences": 7,
+    "defense": 2,
+    "name": "TauntTrampleFlying(5,2)"
+  },
+  {
+    "attack": 5,
+    "competences": 0,
+    "defense": 3,
+    "name": "Vanilla(5,3)"
+  },
+  {
+    "attack": 5,
+    "competences": 1,
+    "defense": 3,
+    "name": "Taunt(5,3)"
+  },
+  {
+    "attack": 5,
+    "competences": 2,
+    "defense": 3,
+    "name": "Trample(5,3)"
+  },
+  {
+    "attack": 5,
+    "competences": 4,
+    "defense": 3,
+    "name": "Flying(5,3)"
+  },
+  {
+    "attack": 5,
+    "competences": 3,
+    "defense": 3,
+    "name": "TauntTrample(5,3)"
+  },
+  {
+    "attack": 5,
+    "competences": 6,
+    "defense": 3,
+    "name": "TrampleFlying(5,3)"
+  },
+  {
+    "attack": 5,
+    "competences": 5,
+    "defense": 3,
+    "name": "TauntFlying(5,3)"
+  },
+  {
+    "attack": 5,
+    "competences": 0,
+    "defense": 4,
+    "name": "Vanilla(5,4)"
+  },
+  {
+    "attack": 5,
+    "competences": 1,
+    "defense": 4,
+    "name": "Taunt(5,4)"
+  },
+  {
+    "attack": 5,
+    "competences": 2,
+    "defense": 4,
+    "name": "Trample(5,4)"
+  },
+  {
+    "attack": 5,
+    "competences": 4,
+    "defense": 4,
+    "name": "Flying(5,4)"
+  },
+  {
+    "attack": 5,
+    "competences": 3,
+    "defense": 4,
+    "name": "TauntTrample(5,4)"
+  },
+  {
+    "attack": 5,
+    "competences": 6,
+    "defense": 4,
+    "name": "TrampleFlying(5,4)"
+  },
+  {
+    "attack": 5,
+    "competences": 5,
+    "defense": 4,
+    "name": "TauntFlying(5,4)"
+  },
+  {
+    "attack": 5,
+    "competences": 0,
+    "defense": 5,
+    "name": "Vanilla(5,5)"
+  },
+  {
+    "attack": 5,
+    "competences": 1,
+    "defense": 5,
+    "name": "Taunt(5,5)"
+  },
+  {
+    "attack": 5,
+    "competences": 2,
+    "defense": 5,
+    "name": "Trample(5,5)"
+  },
+  {
+    "attack": 5,
+    "competences": 4,
+    "defense": 5,
+    "name": "Flying(5,5)"
+  },
+  {
+    "attack": 5,
+    "competences": 0,
+    "defense": 6,
+    "name": "Vanilla(5,6)"
+  },
+  {
+    "attack": 5,
+    "competences": 1,
+    "defense": 6,
+    "name": "Taunt(5,6)"
+  },
+  {
+    "attack": 5,
+    "competences": 2,
+    "defense": 6,
+    "name": "Trample(5,6)"
+  },
+  {
+    "attack": 5,
+    "competences": 4,
+    "defense": 6,
+    "name": "Flying(5,6)"
+  },
+  {
+    "attack": 5,
+    "competences": 0,
+    "defense": 7,
+    "name": "Vanilla(5,7)"
+  },
+  {
+    "attack": 5,
+    "competences": 0,
+    "defense": 8,
+    "name": "Vanilla(5,8)"
+  },
+  {
+    "attack": 6,
+    "competences": 0,
+    "defense": 1,
+    "name": "Vanilla(6,1)"
+  },
+  {
+    "attack": 6,
+    "competences": 1,
+    "defense": 1,
+    "name": "Taunt(6,1)"
+  },
+  {
+    "attack": 6,
+    "competences": 2,
+    "defense": 1,
+    "name": "Trample(6,1)"
+  },
+  {
+    "attack": 6,
+    "competences": 4,
+    "defense": 1,
+    "name": "Flying(6,1)"
+  },
+  {
+    "attack": 6,
+    "competences": 3,
+    "defense": 1,
+    "name": "TauntTrample(6,1)"
+  },
+  {
+    "attack": 6,
+    "competences": 6,
+    "defense": 1,
+    "name": "TrampleFlying(6,1)"
+  },
+  {
+    "attack": 6,
+    "competences": 5,
+    "defense": 1,
+    "name": "TauntFlying(6,1)"
+  },
+  {
+    "attack": 6,
+    "competences": 7,
+    "defense": 1,
+    "name": "TauntTrampleFlying(6,1)"
+  },
+  {
+    "attack": 6,
+    "competences": 0,
+    "defense": 2,
+    "name": "Vanilla(6,2)"
+  },
+  {
+    "attack": 6,
+    "competences": 1,
+    "defense": 2,
+    "name": "Taunt(6,2)"
+  },
+  {
+    "attack": 6,
+    "competences": 2,
+    "defense": 2,
+    "name": "Trample(6,2)"
+  },
+  {
+    "attack": 6,
+    "competences": 4,
+    "defense": 2,
+    "name": "Flying(6,2)"
+  },
+  {
+    "attack": 6,
+    "competences": 3,
+    "defense": 2,
+    "name": "TauntTrample(6,2)"
+  },
+  {
+    "attack": 6,
+    "competences": 6,
+    "defense": 2,
+    "name": "TrampleFlying(6,2)"
+  },
+  {
+    "attack": 6,
+    "competences": 5,
+    "defense": 2,
+    "name": "TauntFlying(6,2)"
+  },
+  {
+    "attack": 6,
+    "competences": 0,
+    "defense": 3,
+    "name": "Vanilla(6,3)"
+  },
+  {
+    "attack": 6,
+    "competences": 1,
+    "defense": 3,
+    "name": "Taunt(6,3)"
+  },
+  {
+    "attack": 6,
+    "competences": 2,
+    "defense": 3,
+    "name": "Trample(6,3)"
+  },
+  {
+    "attack": 6,
+    "competences": 4,
+    "defense": 3,
+    "name": "Flying(6,3)"
+  },
+  {
+    "attack": 6,
+    "competences": 3,
+    "defense": 3,
+    "name": "TauntTrample(6,3)"
+  },
+  {
+    "attack": 6,
+    "competences": 6,
+    "defense": 3,
+    "name": "TrampleFlying(6,3)"
+  },
+  {
+    "attack": 6,
+    "competences": 5,
+    "defense": 3,
+    "name": "TauntFlying(6,3)"
+  },
+  {
+    "attack": 6,
+    "competences": 0,
+    "defense": 4,
+    "name": "Vanilla(6,4)"
+  },
+  {
+    "attack": 6,
+    "competences": 1,
+    "defense": 4,
+    "name": "Taunt(6,4)"
+  },
+  {
+    "attack": 6,
+    "competences": 2,
+    "defense": 4,
+    "name": "Trample(6,4)"
+  },
+  {
+    "attack": 6,
+    "competences": 4,
+    "defense": 4,
+    "name": "Flying(6,4)"
+  },
+  {
+    "attack": 6,
+    "competences": 0,
+    "defense": 5,
+    "name": "Vanilla(6,5)"
+  },
+  {
+    "attack": 6,
+    "competences": 1,
+    "defense": 5,
+    "name": "Taunt(6,5)"
+  },
+  {
+    "attack": 6,
+    "competences": 2,
+    "defense": 5,
+    "name": "Trample(6,5)"
+  },
+  {
+    "attack": 6,
+    "competences": 4,
+    "defense": 5,
+    "name": "Flying(6,5)"
+  },
+  {
+    "attack": 6,
+    "competences": 0,
+    "defense": 6,
+    "name": "Vanilla(6,6)"
+  },
+  {
+    "attack": 6,
+    "competences": 0,
+    "defense": 7,
+    "name": "Vanilla(6,7)"
+  },
+  {
+    "attack": 7,
+    "competences": 0,
+    "defense": 1,
+    "name": "Vanilla(7,1)"
+  },
+  {
+    "attack": 7,
+    "competences": 1,
+    "defense": 1,
+    "name": "Taunt(7,1)"
+  },
+  {
+    "attack": 7,
+    "competences": 2,
+    "defense": 1,
+    "name": "Trample(7,1)"
+  },
+  {
+    "attack": 7,
+    "competences": 4,
+    "defense": 1,
+    "name": "Flying(7,1)"
+  },
+  {
+    "attack": 7,
+    "competences": 3,
+    "defense": 1,
+    "name": "TauntTrample(7,1)"
+  },
+  {
+    "attack": 7,
+    "competences": 6,
+    "defense": 1,
+    "name": "TrampleFlying(7,1)"
+  },
+  {
+    "attack": 7,
+    "competences": 5,
+    "defense": 1,
+    "name": "TauntFlying(7,1)"
+  },
+  {
+    "attack": 7,
+    "competences": 0,
+    "defense": 2,
+    "name": "Vanilla(7,2)"
+  },
+  {
+    "attack": 7,
+    "competences": 1,
+    "defense": 2,
+    "name": "Taunt(7,2)"
+  },
+  {
+    "attack": 7,
+    "competences": 2,
+    "defense": 2,
+    "name": "Trample(7,2)"
+  },
+  {
+    "attack": 7,
+    "competences": 4,
+    "defense": 2,
+    "name": "Flying(7,2)"
+  },
+  {
+    "attack": 7,
+    "competences": 3,
+    "defense": 2,
+    "name": "TauntTrample(7,2)"
+  },
+  {
+    "attack": 7,
+    "competences": 6,
+    "defense": 2,
+    "name": "TrampleFlying(7,2)"
+  },
+  {
+    "attack": 7,
+    "competences": 5,
+    "defense": 2,
+    "name": "TauntFlying(7,2)"
+  },
+  {
+    "attack": 7,
+    "competences": 0,
+    "defense": 3,
+    "name": "Vanilla(7,3)"
+  },
+  {
+    "attack": 7,
+    "competences": 1,
+    "defense": 3,
+    "name": "Taunt(7,3)"
+  },
+  {
+    "attack": 7,
+    "competences": 2,
+    "defense": 3,
+    "name": "Trample(7,3)"
+  },
+  {
+    "attack": 7,
+    "competences": 4,
+    "defense": 3,
+    "name": "Flying(7,3)"
+  },
+  {
+    "attack": 7,
+    "competences": 0,
+    "defense": 4,
+    "name": "Vanilla(7,4)"
+  },
+  {
+    "attack": 7,
+    "competences": 1,
+    "defense": 4,
+    "name": "Taunt(7,4)"
+  },
+  {
+    "attack": 7,
+    "competences": 2,
+    "defense": 4,
+    "name": "Trample(7,4)"
+  },
+  {
+    "attack": 7,
+    "competences": 4,
+    "defense": 4,
+    "name": "Flying(7,4)"
+  },
+  {
+    "attack": 7,
+    "competences": 0,
+    "defense": 5,
+    "name": "Vanilla(7,5)"
+  },
+  {
+    "attack": 7,
+    "competences": 0,
+    "defense": 6,
+    "name": "Vanilla(7,6)"
+  },
+  {
+    "attack": 8,
+    "competences": 0,
+    "defense": 1,
+    "name": "Vanilla(8,1)"
+  },
+  {
+    "attack": 8,
+    "competences": 1,
+    "defense": 1,
+    "name": "Taunt(8,1)"
+  },
+  {
+    "attack": 8,
+    "competences": 2,
+    "defense": 1,
+    "name": "Trample(8,1)"
+  },
+  {
+    "attack": 8,
+    "competences": 4,
+    "defense": 1,
+    "name": "Flying(8,1)"
+  },
+  {
+    "attack": 8,
+    "competences": 3,
+    "defense": 1,
+    "name": "TauntTrample(8,1)"
+  },
+  {
+    "attack": 8,
+    "competences": 6,
+    "defense": 1,
+    "name": "TrampleFlying(8,1)"
+  },
+  {
+    "attack": 8,
+    "competences": 5,
+    "defense": 1,
+    "name": "TauntFlying(8,1)"
+  },
+  {
+    "attack": 8,
+    "competences": 0,
+    "defense": 2,
+    "name": "Vanilla(8,2)"
+  },
+  {
+    "attack": 8,
+    "competences": 1,
+    "defense": 2,
+    "name": "Taunt(8,2)"
+  },
+  {
+    "attack": 8,
+    "competences": 2,
+    "defense": 2,
+    "name": "Trample(8,2)"
+  },
+  {
+    "attack": 8,
+    "competences": 4,
+    "defense": 2,
+    "name": "Flying(8,2)"
+  },
+  {
+    "attack": 8,
+    "competences": 0,
+    "defense": 3,
+    "name": "Vanilla(8,3)"
+  },
+  {
+    "attack": 8,
+    "competences": 1,
+    "defense": 3,
+    "name": "Taunt(8,3)"
+  },
+  {
+    "attack": 8,
+    "competences": 2,
+    "defense": 3,
+    "name": "Trample(8,3)"
+  },
+  {
+    "attack": 8,
+    "competences": 4,
+    "defense": 3,
+    "name": "Flying(8,3)"
+  },
+  {
+    "attack": 8,
+    "competences": 0,
+    "defense": 4,
+    "name": "Vanilla(8,4)"
+  },
+  {
+    "attack": 8,
+    "competences": 0,
+    "defense": 5,
+    "name": "Vanilla(8,5)"
+  },
+  {
+    "attack": 9,
+    "competences": 0,
+    "defense": 1,
+    "name": "Vanilla(9,1)"
+  },
+  {
+    "attack": 9,
+    "competences": 1,
+    "defense": 1,
+    "name": "Taunt(9,1)"
+  },
+  {
+    "attack": 9,
+    "competences": 2,
+    "defense": 1,
+    "name": "Trample(9,1)"
+  },
+  {
+    "attack": 9,
+    "competences": 4,
+    "defense": 1,
+    "name": "Flying(9,1)"
+  },
+  {
+    "attack": 9,
+    "competences": 0,
+    "defense": 2,
+    "name": "Vanilla(9,2)"
+  },
+  {
+    "attack": 9,
+    "competences": 1,
+    "defense": 2,
+    "name": "Taunt(9,2)"
+  },
+  {
+    "attack": 9,
+    "competences": 2,
+    "defense": 2,
+    "name": "Trample(9,2)"
+  },
+  {
+    "attack": 9,
+    "competences": 4,
+    "defense": 2,
+    "name": "Flying(9,2)"
+  },
+  {
+    "attack": 9,
+    "competences": 0,
+    "defense": 3,
+    "name": "Vanilla(9,3)"
+  },
+  {
+    "attack": 9,
+    "competences": 0,
+    "defense": 4,
+    "name": "Vanilla(9,4)"
+  },
+  {
+    "attack": 10,
+    "competences": 0,
+    "defense": 1,
+    "name": "Vanilla(10,1)"
+  },
+  {
+    "attack": 10,
+    "competences": 1,
+    "defense": 1,
+    "name": "Taunt(10,1)"
+  },
+  {
+    "attack": 10,
+    "competences": 2,
+    "defense": 1,
+    "name": "Trample(10,1)"
+  },
+  {
+    "attack": 10,
+    "competences": 4,
+    "defense": 1,
+    "name": "Flying(10,1)"
+  },
+  {
+    "attack": 10,
+    "competences": 0,
+    "defense": 2,
+    "name": "Vanilla(10,2)"
+  },
+  {
+    "attack": 10,
+    "competences": 0,
+    "defense": 3,
+    "name": "Vanilla(10,3)"
+  },
+  {
+    "attack": 11,
+    "competences": 0,
+    "defense": 1,
+    "name": "Vanilla(11,1)"
+  },
+  {
+    "attack": 11,
+    "competences": 0,
+    "defense": 2,
+    "name": "Vanilla(11,2)"
+  },
+  {
+    "attack": 12,
+    "competences": 0,
+    "defense": 1,
+    "name": "Vanilla(12,1)"
+  }
+]

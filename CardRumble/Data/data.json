@@ -1,13 +1,1 @@
-{
-  "GenIdx": 0,
-  "LastAddedCard": {
-    "attack": 1,
-    "defense": 2,
-    "name": "Vanilla(1,2)"
-  },
-  "LastRemovedCard": {
-    "attack": 0,
-    "defense": 6,
-    "name": "Vanilla(0,6)"
-  }
-}
+{"GenIdx":26,"LastAddedCard":{"attack":0,"competence":3,"defense":6,"name":"TauntTrample(0,6)"},"LastRemovedCard":{"attack":5,"competence":2,"defense":1,"name":"Trample(5,1)"}}

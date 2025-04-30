@@ -12,6 +12,7 @@ class Card
 		uint32_t _atk = 0;
 		uint32_t _def = 1;
 		std::string _name;
+		int _ability = 0;
 
 		Card(json source);
 		Card();
@@ -24,4 +25,3 @@ class Card
 
 		void from_json(const json& j);
 };
-

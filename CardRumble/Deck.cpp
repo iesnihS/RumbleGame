@@ -13,8 +13,6 @@ Deck::Deck()
 		setList = json::parse(check);
 	else return;
 
-	 
-
 	for(uint32_t i = 0; i < 30; i ++)
 	{
 		Card currentLastCard = Card(setList[rand() % setList.size()]);

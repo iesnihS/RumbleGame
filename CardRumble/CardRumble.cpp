@@ -7,6 +7,7 @@ constexpr uint32_t NB_GAMES_PER_PASS = 1000;
 constexpr uint32_t NB_OPTI_PASS = 1000;
 
 constexpr bool DEBUG = false;
+constexpr bool ONLYGENSETLIST = true;
 
 Deck deckP1;
 Deck deckReference;
@@ -197,7 +198,7 @@ int main()
 	
 	Card::InitAllPossibleCards();
 
-	deckReference = Deck("Data/reference_player.json");
+	deckReference = Deck("Data/reference_player2.json");
 	deckP1 = Deck(); //Deck("Data/BestDeck.json");
 
 	p1 = new Player(deckP1, "Samuel");
@@ -212,5 +213,6 @@ int main()
 	}
 	Visualiser::GenGraph(graphWin, 0);
 	std::ofstream o{ "Data/data.json" };
+	data["GenIdx"] = data["GenIdx"].template get<int>()+1;
 	o << data;
 }

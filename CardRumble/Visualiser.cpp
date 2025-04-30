@@ -23,6 +23,7 @@ void Visualiser::GenGraph(const std::vector<double>& x, int passIdx)
 		std::cout << "Pas de data, pas de graph" << std::endl;
 		return;
 	}
+
 	json j = json::parse(data);
 	int idx = j["GenIdx"].template get<int>();
 	auto f = matplot::figure(true);
@@ -31,12 +32,12 @@ void Visualiser::GenGraph(const std::vector<double>& x, int passIdx)
 	ax->ylabel("Winrate en %");
 	ax->xlabel("Numéro de passe d'optimisation");
 	auto p = ax->plot(x);
+	std::ostringstream graphName;
+	graphName << "Évolution du WinRate _ " << ++idx;
+	p->display_name(graphName.str());
 	p->color("red");
-	p->display_name("Évolution du Winrate");
-
 	matplot::yrange({ 0, 100 });
-	matplot::show();
-	matplot::save(GetFileName("WinRateGraph", ++idx));
+	matplot::save(GetFileName("WinRateGraph", idx));
 	j["GenIdx"] = idx;
 	data << j;
 }

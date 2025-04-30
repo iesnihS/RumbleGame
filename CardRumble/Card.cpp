@@ -3,9 +3,39 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
+#include <queue>
 
+enum Ability : int
+{
+	None = 0,
+	Taunt = 1,
+	Trample = 2,
+	Flying = 4
+};
+
+std::vector<int> possibleAbilities;
 
 uint32_t Card::_maxCost = 6;
+static json GenCard(std::string alias, uint32_t atk, uint32_t def, int ability)
+{
+	std::ostringstream name;
+	name << alias << "(" << atk << "," << def << ")";
+	json card;
+	card["name"] = name.str();
+	card["attack"] = atk;
+	card["defense"] = def;
+	card["competences"] = ability;
+	return card;
+}
+
+static std::string GetCardAlias(int ability)
+{
+	std::ostringstream alias;
+	if (ability & Taunt) alias << "Taunt";
+	if (ability & Trample) alias << "Trample";
+	if (ability & Flying) alias << "Flying";
+	return alias.str();
+}
 
 void Card::InitAllPossibleCards()
 {
@@ -13,25 +43,47 @@ void Card::InitAllPossibleCards()
 	std::ifstream check("Data/setList.json");
 	if(check.good()) return;
 
-	// If not : generate.
-	std::ofstream tempFile{ "Data/setList.json" };
+	possibleAbilities.push_back(Taunt);
+	possibleAbilities.push_back(Trample);
+	possibleAbilities.push_back(Flying);
 
-	json assetList;
-
+	json setList;
 	for (uint32_t atk = 0; atk < _maxCost * 2 + 1; atk++)
 	{
 		for(uint16_t def = 1; def < _maxCost * 2 - atk +2; def++)
 		{
-			std::ostringstream name;
-			name << "Vanilla(" << atk << "," << def << ")";
-			json card;
-			card["name"] = name.str();
-			card["attack"] = atk;
-			card["defense"] = def;
-			assetList.emplace_back(card);
+			setList.emplace_back(GenCard("Vanilla", atk, def, 0));
+
+			int cost = floor((atk + def) / 2.0f);
+			int currentAbility = 0;
+			std::ostringstream alias;
+			if (cost+1 <= _maxCost)
+			{
+				for (int ab : possibleAbilities)
+					setList.emplace_back(GenCard(GetCardAlias(ab), atk, def, ab));
+
+				if (cost+2 <= _maxCost)
+				{
+					for (int i = 0; i < possibleAbilities.size(); ++i)
+					{
+						int ab;
+						if (i == possibleAbilities.size() - 1)
+							ab = possibleAbilities[0] | possibleAbilities[i];
+						else ab = possibleAbilities[i] | possibleAbilities[i + 1];
+						setList.emplace_back(GenCard(GetCardAlias(ab), atk, def, ab));
+					}
+					if (cost+3 <= _maxCost)
+					{
+						int ab = Taunt | Trample | Flying;
+						setList.emplace_back(GenCard(GetCardAlias(ab), atk, def, ab));
+					}
+				}
+			}
 		}
 	}
-	tempFile << assetList;
+
+	std::ofstream tempFile{ "Data/setList.json" };
+	tempFile << setList;
 	tempFile.close();
 }
 
@@ -46,6 +98,7 @@ Card::Card()
 	json source = setList[rand() % setList.size()];
 	from_json(source);
 }
+
 Card::Card(json source)
 {
 	from_json(source);
@@ -58,16 +111,24 @@ void Card::PrintCard() const
 	std::cout << oss.str() << std::endl;
 }
 
-void Card::to_json(json& j) {
-	j = json{
+void Card::to_json(json& j)
+{
+	j = json
+	{
 		{"name", _name},
 		{"attack", _atk},
-		{"defense", _def} };
+		{"defense", _def},
+		{"competence", _ability}
+	};
 }
 
 void Card::from_json(const json& j) {
 	j["name"].get_to(_name);
 	j["attack"].get_to(_atk);
 	j["defense"].get_to(_def);
-	_manaCost = ceil((_atk + _def) / 2);
+	j["competences"].get_to(_ability);
+	int abCost = (_ability & Taunt ? 1 : 0) +
+		(_ability & Trample ? 1 : 0) +
+		(_ability & Flying ? 1 : 0);
+	_manaCost = floor((_atk + _def) / 2) + abCost;
 }
