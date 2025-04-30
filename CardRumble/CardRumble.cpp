@@ -4,7 +4,7 @@
 #include "Visualiser.h"
 
 constexpr uint32_t NB_GAMES_PER_PASS = 1000;
-constexpr uint32_t NB_OPTI_PASS = 500;
+constexpr uint32_t NB_OPTI_PASS = 1000;
 
 constexpr bool DEBUG = false;
 
@@ -92,8 +92,6 @@ void Game()
 	return;
 }
 
-
-
 void ResetGame()
 {
 	p1->Reset();
@@ -125,7 +123,7 @@ void OptiPass()
 
 	pieWin.push_back((double)res1);
 	pieWin.push_back((double)res2);
-	graphWin.push_back((double)res1);
+	graphWin.push_back((double)res1 * 100);
 	//Visualiser::GenPieChart(pieWin, nbGames);
 
 	if (DEBUG)
@@ -136,12 +134,12 @@ void OptiPass()
 		std::cout << oss.str() << std::endl;
 	}
 	
-	std::ifstream f("BestDeck.json");
+	std::ifstream f("Data/BestDeck.json");
 	if (f.good())
 	{
 		json deckJ = json::parse(f);
 		json setList;
-		std::ifstream iset("setList.json");
+		std::ifstream iset("Data/setList.json");
 		setList = json::parse(iset);
 
 		if (deckJ["WinRate"] > res1)
@@ -151,7 +149,7 @@ void OptiPass()
 			deckP1.ChangeCard(addedCard._name, removedCard);
 		}
 		else
-			deckP1.SaveDeckToJson("BestDeck", res1);
+			deckP1.SaveDeckToJson("Data/BestDeck", res1);
 
 		Card removedCard = deckP1._cards[rand() % deckP1._cards.size()];
 		Card addedCard = Card(setList[rand() % setList.size()]);
@@ -169,7 +167,7 @@ void OptiPass()
 		deckP1.ChangeCard(removedCard._name, addedCard);
 	}
 	else
-		deckP1.SaveDeckToJson("BestDeck", res1);
+		deckP1.SaveDeckToJson("Data/BestDeck", res1);
 
 	
 }
@@ -180,15 +178,16 @@ void AddCarteToData(std::string dataName, Card& card)
 	card.to_json(lastCard);
 	data[dataName] = lastCard;
 }
+
 int main()
 {
-	std::ifstream i("data.json");
+	std::ifstream i("Data/data.json");
 
 	if (i.good())
 		data = json::parse(i);
 	else
 	{
-		std::ofstream o{ "data.json" };
+		std::ofstream o{ "Data/data.json" };
 		Card temp1 = Card();
 		AddCarteToData("LastRemovedCard", temp1);
 		Card temp2 = Card();
@@ -198,8 +197,8 @@ int main()
 	
 	Card::InitAllPossibleCards();
 
-	deckReference = Deck("reference_player.json");
-	deckP1 = Deck("BestDeck.json");
+	deckReference = Deck("Data/reference_player.json");
+	deckP1 = Deck(); //Deck("Data/BestDeck.json");
 
 	p1 = new Player(deckP1, "Samuel");
 	p2 = new Player(deckReference, "Arthur");
@@ -212,6 +211,6 @@ int main()
 		std::cout << "Process at " << ((float)i / NB_OPTI_PASS * 100) << "%\n";
 	}
 	Visualiser::GenGraph(graphWin, 0);
-	std::ofstream o{ "data.json" };
+	std::ofstream o{ "Data/data.json" };
 	o << data;
 }

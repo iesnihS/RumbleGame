@@ -1,6 +1,6 @@
 #include "Visualiser.h"
 #include <sstream>
-
+using json = nlohmann::json;
 
 Visualiser::Visualiser()
 {
@@ -17,14 +17,28 @@ void Visualiser::GenPieChart(const std::vector<double>& x, int gameIdx)
 
 void Visualiser::GenGraph(const std::vector<double>& x, int passIdx)
 {
-	//std::vector<int> y;
-	//for (int i = 0; i < 1000; ++i) y.push_back(i);
+	std::fstream data("Data/data.json");
+	if (!data.good())
+	{
+		std::cout << "Pas de data, pas de graph" << std::endl;
+		return;
+	}
+	json j = json::parse(data);
+	int idx = j["GenIdx"].template get<int>();
 	auto f = matplot::figure(true);
+	f->size(512, 512);
 	auto ax = f->current_axes();
+	ax->ylabel("Winrate en %");
+	ax->xlabel("Numéro de passe d'optimisation");
 	auto p = ax->plot(x);
-	p->color("red").line_width(2);
-	matplot::save(GetFileName("WinRateGraph", passIdx));
+	p->color("red");
+	p->display_name("Évolution du Winrate");
 
+	matplot::yrange({ 0, 100 });
+	matplot::show();
+	matplot::save(GetFileName("WinRateGraph", ++idx));
+	j["GenIdx"] = idx;
+	data << j;
 }
 
 std::string Visualiser::GetFileName(std::string name, int idx)

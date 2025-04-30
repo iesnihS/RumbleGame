@@ -8,7 +8,7 @@ using json = nlohmann::json;
 Deck::Deck()
 {
 	json setList;
-	std::ifstream check("setList.json");
+	std::ifstream check("Data/setList.json");
 	if (check.good())
 		setList = json::parse(check);
 	else return;
@@ -73,7 +73,7 @@ Card Deck::GetFirstCard()
 void Deck::SaveDeckToJson(std::string name, float winRate)
 {
 	std::ostringstream jsonName;
-	jsonName << name << ".json";
+	 jsonName << "Data/" << name << ".json";
 	std::ofstream tempFile{ jsonName.str() };
 
 	json deck;

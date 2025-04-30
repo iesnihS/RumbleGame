@@ -1,0 +1,13 @@
+{
+  "GenIdx": 0,
+  "LastAddedCard": {
+    "attack": 1,
+    "defense": 2,
+    "name": "Vanilla(1,2)"
+  },
+  "LastRemovedCard": {
+    "attack": 0,
+    "defense": 6,
+    "name": "Vanilla(0,6)"
+  }
+}
