@@ -1,6 +1,7 @@
 #pragma once
 #include <matplot/matplot.h>
 #include "./single_include/nlohmann/json.hpp"
+#include "Deck.h"
 
 class Visualiser
 {

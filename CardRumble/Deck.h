@@ -18,5 +18,7 @@ class Deck
 		Card GetFirstCard();
 		void SaveDeckToJson(std::string name, float);
 		void ChangeCard(std::string remove, Card add);
+
+		std::string DeckList();
 };
 

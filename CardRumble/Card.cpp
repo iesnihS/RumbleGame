@@ -5,14 +5,6 @@
 #include <fstream>
 #include <queue>
 
-enum Ability : int
-{
-	None = 0,
-	Taunt = 1,
-	Trample = 2,
-	Flying = 4
-};
-
 std::vector<int> possibleAbilities;
 
 uint32_t Card::_maxCost = 6;
@@ -122,7 +114,8 @@ void Card::to_json(json& j)
 	};
 }
 
-void Card::from_json(const json& j) {
+void Card::from_json(const json& j)
+{
 	j["name"].get_to(_name);
 	j["attack"].get_to(_atk);
 	j["defense"].get_to(_def);

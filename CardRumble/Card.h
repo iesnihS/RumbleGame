@@ -4,6 +4,14 @@
 #include "./single_include/nlohmann/json.hpp"
 using json = nlohmann::json;
 
+enum Ability : int
+{
+	None = 0,
+	Taunt = 1,
+	Trample = 2,
+	Flying = 4
+};
+
 class Card
 {
 	public:

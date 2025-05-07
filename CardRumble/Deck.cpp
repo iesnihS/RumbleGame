@@ -3,6 +3,7 @@
 #include <random>
 #include "./single_include/nlohmann/json.hpp"
 #include <sstream>
+#include "Card.h"
 using json = nlohmann::json;
 
 Deck::Deck()
@@ -98,3 +99,23 @@ void Deck::ChangeCard(std::string remove, Card add)
 	}
 }
 
+std::string Deck::DeckList()
+{
+	std::ostringstream res;
+	res << "La decklist ->" << std::endl;
+	for (Card card : _cards)
+	{
+		res << card._name << "-> Cost:" << card._manaCost;
+		res << " | Atk: " << card._atk << " | Def: " << card._def;
+		int ability = card._ability;
+		if (ability > 0)
+		{
+			res << " | Skills: ";
+			if (ability & Ability::Taunt) res << "Taunt ";
+			if (ability & Ability::Trample) res << "Trample ";
+			if (ability & Ability::Flying) res << "Flying";
+		}
+		res << std::endl;
+	}
+	return res.str();
+}

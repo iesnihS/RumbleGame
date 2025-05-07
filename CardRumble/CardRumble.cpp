@@ -12,8 +12,15 @@ constexpr bool ONLYGENSETLIST = true;
 Deck deckP1;
 Deck deckReference;
 
-std::vector<double> pieWin;
-std::vector<double> graphWin;
+std::vector<double> winRates;
+std::vector<double> costAvgs;
+std::vector<double> atkAvgs;
+std::vector<double> defAvgs;
+std::vector<double> durationAvgs;
+
+std::vector<double> skillRep;
+std::vector<double> costDst;
+float durAvg = 0;
 
 Player* p1;
 Player* p2;
@@ -46,7 +53,6 @@ static bool PlayerTurn(Player* currentPlayer, Player* enemyPlayer)
 void Game()
 {
 	bool isFirst = rand() % 2 == 0;
-	
 
 	Player* firstPlayer = isFirst ? p1 : p2;
 	Player* secondPlayer = !isFirst ? p1 : p2;
@@ -56,7 +62,6 @@ void Game()
 		std::cout << "FIRST PLAYER  " << firstPlayer->_name << std::endl;
 		std::cout << "SECOND PLAYER  " << secondPlayer->_name << std::endl;
 	}
-	
 
 	firstPlayer->_deck.Shuffle();
 	secondPlayer->_deck.Shuffle();
@@ -76,7 +81,6 @@ void Game()
 		firstPlayer->PrintHand();
 		secondPlayer->PrintHand();
 	}
-	
 
 	while (true)
 	{
@@ -90,6 +94,7 @@ void Game()
 	}
 	if (DEBUG)
 		std::cout << "P1 pv : " << firstPlayer->_pv << " P2 pv : " << secondPlayer->_pv << "\n" << std::endl;
+	durAvg += turn;
 	return;
 }
 
@@ -100,8 +105,6 @@ void ResetGame()
 
 	p1->SetDeck(deckP1);
 	p2->SetDeck(deckReference);
-
-	pieWin.clear();
 }
 
 void OptiPass()
@@ -122,10 +125,27 @@ void OptiPass()
 	p1->_nbOfGameWin = 0;
 	p2->_nbOfGameWin = 0;
 
-	pieWin.push_back((double)res1);
-	pieWin.push_back((double)res2);
-	graphWin.push_back((double)res1 * 100);
-	//Visualiser::GenPieChart(pieWin, nbGames);
+
+	float atkAvg = 0;
+	float defAvg = 0;
+	float costAvg = 0;
+	float durationAvg = 0;
+	for (Card c : deckP1._cards)
+	{
+		atkAvg += c._atk;
+		defAvg += c._def;
+		costAvg += c._manaCost;
+	}
+	int size = deckP1._cards.size();
+
+	for (Card c : deckP1._cards) c._manaCost;
+	
+	winRates.push_back((double)res1 * 100);
+	atkAvgs.push_back(atkAvg / size);
+	defAvgs.push_back(defAvg / size);
+	costAvgs.push_back(costAvg / size);
+	durationAvgs.push_back(durAvg / NB_GAMES_PER_PASS);
+	durAvg = 0;
 
 	if (DEBUG)
 	{
@@ -169,8 +189,6 @@ void OptiPass()
 	}
 	else
 		deckP1.SaveDeckToJson("Data/BestDeck", res1);
-
-	
 }
 
 void AddCarteToData(std::string dataName, Card& card)
@@ -205,14 +223,32 @@ int main()
 	p2 = new Player(deckReference, "Arthur");
 	srand(time(0));
 
-
 	for(uint32_t i = 0; i < NB_OPTI_PASS; i++)
 	{
 		OptiPass();
 		std::cout << "Process at " << ((float)i / NB_OPTI_PASS * 100) << "%\n";
 	}
-	Visualiser::GenGraph(graphWin, 0);
+
+	Visualiser::GenGraph(winRates, 0);
+	Visualiser::GenGraph(atkAvgs, 1);
+	Visualiser::GenGraph(defAvgs, 2);
+	Visualiser::GenGraph(costAvgs, 3);
+	Visualiser::GenGraph(durationAvgs, 4);
+
+	costDst.assign(Card::_maxCost, 0);
+	skillRep.assign(3, 0);
+	for (Card c : deckP1._cards) 
+	{
+		++costDst[c._manaCost];
+		if (c._ability & Taunt) ++skillRep[0];
+		if (c._ability & Trample) ++skillRep[1];
+		if (c._ability & Flying) ++skillRep[2];
+	}
+
+	Visualiser::GenGraph(skillRep, 5);
+	Visualiser::GenGraph(costDst, 6);
 	std::ofstream o{ "Data/data.json" };
 	data["GenIdx"] = data["GenIdx"].template get<int>()+1;
 	o << data;
+	std::cout << deckP1.DeckList() << std::endl;
 }
