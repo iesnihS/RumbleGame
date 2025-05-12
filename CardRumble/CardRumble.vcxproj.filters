@@ -90,5 +90,20 @@
     <None Include="reference_player.json">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="Data\BestDeck.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Data\data.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Data\reference_player.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Data\reference_player2.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Data\setList.json">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

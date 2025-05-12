@@ -14,22 +14,31 @@ enum Ability : int
 
 class Card
 {
-	public:
-		static uint32_t _maxCost;
-		uint32_t _manaCost = 0;
-		uint32_t _atk = 0;
-		uint32_t _def = 1;
-		std::string _name;
-		int _ability = 0;
+public:
+	static uint32_t _maxCost;
+	uint32_t _manaCost = 0;
+	uint32_t _atk = 0;
+	uint32_t _def = 1;
+	uint32_t currentDef = 1;
+	std::string _name;
+	int _ability = 0;
+	bool dead = false;
 
-		Card(json source);
-		Card();
+	Card(json source);
+	Card();
 
-		static void InitAllPossibleCards();
+	void Randomize();
+	static void InitAllPossibleCards();
 
-		void PrintCard() const;
+	void PrintCard() const;
 
-		void to_json(json& j);
+	void to_json(json& j);
 
-		void from_json(const json& j);
+	void from_json(const json& j);
+
+	bool HasAbility(Ability a) const;
+
+	int Fight(Card* otherCard);
+
+	void RegainLife();
 };

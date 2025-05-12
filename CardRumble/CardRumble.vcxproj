@@ -185,6 +185,11 @@
     <ResourceCompile Include="CardRumble.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Data\BestDeck.json" />
+    <None Include="Data\data.json" />
+    <None Include="Data\reference_player.json" />
+    <None Include="Data\reference_player2.json" />
+    <None Include="Data\setList.json" />
     <None Include="reference_player.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -23,6 +23,7 @@ public:
 	void PlayCard(uint32_t);
 	void AttackPlayer(Player*);
 	void Reset();
+	void RemoveDeadCards();
 
 	void PrintHand();
 };

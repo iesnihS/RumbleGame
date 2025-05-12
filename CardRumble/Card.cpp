@@ -6,6 +6,7 @@
 #include <queue>
 
 std::vector<int> possibleAbilities;
+static bool ABILITIES_ON = true;
 
 uint32_t Card::_maxCost = 6;
 static json GenCard(std::string alias, uint32_t atk, uint32_t def, int ability)
@@ -16,7 +17,7 @@ static json GenCard(std::string alias, uint32_t atk, uint32_t def, int ability)
 	card["name"] = name.str();
 	card["attack"] = atk;
 	card["defense"] = def;
-	card["competences"] = ability;
+	card["skills"] = ability;
 	return card;
 }
 
@@ -49,6 +50,7 @@ void Card::InitAllPossibleCards()
 			int cost = floor((atk + def) / 2.0f);
 			int currentAbility = 0;
 			std::ostringstream alias;
+			if (!ABILITIES_ON) continue;
 			if (cost+1 <= _maxCost)
 			{
 				for (int ab : possibleAbilities)
@@ -79,17 +81,7 @@ void Card::InitAllPossibleCards()
 	tempFile.close();
 }
 
-Card::Card()
-{
-	json setList;
-	std::ifstream check("Data/setList.json");
-	if (check.good())
-		setList = json::parse(check);
-	else return;
-
-	json source = setList[rand() % setList.size()];
-	from_json(source);
-}
+Card::Card(){}
 
 Card::Card(json source)
 {
@@ -110,7 +102,7 @@ void Card::to_json(json& j)
 		{"name", _name},
 		{"attack", _atk},
 		{"defense", _def},
-		{"competence", _ability}
+		{"skills", _ability}
 	};
 }
 
@@ -119,9 +111,41 @@ void Card::from_json(const json& j)
 	j["name"].get_to(_name);
 	j["attack"].get_to(_atk);
 	j["defense"].get_to(_def);
-	j["competences"].get_to(_ability);
-	int abCost = (_ability & Taunt ? 1 : 0) +
-		(_ability & Trample ? 1 : 0) +
-		(_ability & Flying ? 1 : 0);
-	_manaCost = floor((_atk + _def) / 2) + abCost;
+	currentDef = _def;
+	if (ABILITIES_ON)
+	{
+		j["skills"].get_to(_ability);
+		int abCost = (_ability & Taunt ? 1 : 0) +
+			(_ability & Trample ? 1 : 0) +
+			(_ability & Flying ? 1 : 0);
+		_manaCost = floor((_atk + _def) / 2) + abCost;
+	}
+	else _manaCost = floor((_atk + _def) / 2);
+}
+
+bool Card::HasAbility(Ability a) const { return _ability & a; }
+
+int Card::Fight(Card* otherCard)
+{
+	int trampleDmg = 0;
+	if (HasAbility(Trample) && _atk > otherCard->currentDef) trampleDmg =  _atk - otherCard->currentDef;
+	currentDef -= otherCard->_atk;
+	otherCard->currentDef -= _atk;
+	if (currentDef <= 0) dead = true;
+	if (otherCard->currentDef <= 0) otherCard->dead = true;
+	return trampleDmg;
+}
+
+void Card::RegainLife() { currentDef = _def; }
+
+void Card::Randomize()
+{
+	json setList;
+	std::ifstream check("Data/setList.json");
+	if (check.good())
+		setList = json::parse(check);
+	else return;
+
+	json source = setList[rand() % setList.size()];
+	from_json(source);
 }

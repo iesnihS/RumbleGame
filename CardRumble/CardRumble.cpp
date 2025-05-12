@@ -4,10 +4,10 @@
 #include "Visualiser.h"
 
 constexpr uint32_t NB_GAMES_PER_PASS = 1000;
-constexpr uint32_t NB_OPTI_PASS = 1000;
+constexpr uint32_t NB_OPTI_PASS = 2500;
 
-constexpr bool DEBUG = false;
-constexpr bool ONLYGENSETLIST = true;
+constexpr bool DEBUG_PASS = false;
+constexpr bool DEBUG_GAME = false;
 
 Deck deckP1;
 Deck deckReference;
@@ -33,16 +33,17 @@ static bool PlayerTurn(Player* currentPlayer, Player* enemyPlayer)
 {
 	if (!currentPlayer->Draw())
 	{
-		if(DEBUG)
+		if (DEBUG_GAME)
 			std::cout << enemyPlayer->_name + " Win !";
 		enemyPlayer->_nbOfGameWin++;
 		return true;
 	}
+
 	currentPlayer->PlayBestCard();
 	currentPlayer->AttackPlayer(enemyPlayer);
 	if (enemyPlayer->_pv <= 0)
 	{
-		if (DEBUG)
+		if (DEBUG_GAME)
 			std::cout << currentPlayer->_name + " Win !";
 		currentPlayer->_nbOfGameWin ++;
 		return true;
@@ -57,7 +58,7 @@ void Game()
 	Player* firstPlayer = isFirst ? p1 : p2;
 	Player* secondPlayer = !isFirst ? p1 : p2;
 
-	if (DEBUG)
+	if (DEBUG_GAME)
 	{
 		std::cout << "FIRST PLAYER  " << firstPlayer->_name << std::endl;
 		std::cout << "SECOND PLAYER  " << secondPlayer->_name << std::endl;
@@ -76,7 +77,7 @@ void Game()
 	firstPlayer->_currentMana = turn;
 	secondPlayer->_currentMana = turn;
 	
-	if(DEBUG)
+	if (DEBUG_GAME)
 	{
 		firstPlayer->PrintHand();
 		secondPlayer->PrintHand();
@@ -92,7 +93,7 @@ void Game()
 		firstPlayer->_currentMana = turn;
 		secondPlayer->_currentMana = turn;
 	}
-	if (DEBUG)
+	if (DEBUG_GAME)
 		std::cout << "P1 pv : " << firstPlayer->_pv << " P2 pv : " << secondPlayer->_pv << "\n" << std::endl;
 	durAvg += turn;
 	return;
@@ -147,7 +148,7 @@ void OptiPass()
 	durationAvgs.push_back(durAvg / NB_GAMES_PER_PASS);
 	durAvg = 0;
 
-	if (DEBUG)
+	if (DEBUG_PASS)
 	{
 		std::ostringstream oss;
 		oss << "Winrate " << p1->_name << " = " << res1 * 100 << "% " << " | Winrate "
@@ -170,7 +171,7 @@ void OptiPass()
 			deckP1.ChangeCard(addedCard._name, removedCard);
 		}
 		else
-			deckP1.SaveDeckToJson("Data/BestDeck", res1);
+			deckP1.SaveDeckToJson("BestDeck", res1);
 
 		Card removedCard = deckP1._cards[rand() % deckP1._cards.size()];
 		Card addedCard = Card(setList[rand() % setList.size()]);
@@ -188,7 +189,7 @@ void OptiPass()
 		deckP1.ChangeCard(removedCard._name, addedCard);
 	}
 	else
-		deckP1.SaveDeckToJson("Data/BestDeck", res1);
+		deckP1.SaveDeckToJson("BestDeck", res1);
 }
 
 void AddCarteToData(std::string dataName, Card& card)
@@ -208,8 +209,10 @@ int main()
 	{
 		std::ofstream o{ "Data/data.json" };
 		Card temp1 = Card();
+		temp1.Randomize();
 		AddCarteToData("LastRemovedCard", temp1);
 		Card temp2 = Card();
+		temp2.Randomize();
 		AddCarteToData("LastAddedCard", temp2);
 		o << data;
 	}
@@ -217,7 +220,7 @@ int main()
 	Card::InitAllPossibleCards();
 
 	deckReference = Deck("Data/reference_player2.json");
-	deckP1 = Deck(); //Deck("Data/BestDeck.json");
+	deckP1.Randomize();// = Deck("Data/BestDeck.json");
 
 	p1 = new Player(deckP1, "Samuel");
 	p2 = new Player(deckReference, "Arthur");
@@ -236,14 +239,23 @@ int main()
 	Visualiser::GenGraph(durationAvgs, 4);
 
 	costDst.assign(Card::_maxCost, 0);
-	skillRep.assign(3, 0);
-	for (Card c : deckP1._cards) 
+	skillRep.assign(4, 0);
+
+	Deck bestDeck = Deck("Data/BestDeck.json");
+	for (Card c : bestDeck._cards)
 	{
-		++costDst[c._manaCost];
-		if (c._ability & Taunt) ++skillRep[0];
-		if (c._ability & Trample) ++skillRep[1];
-		if (c._ability & Flying) ++skillRep[2];
+		++costDst[c._manaCost == 0 ? 1 : c._manaCost-1];
+		if (c._ability == 0)
+		{
+			++skillRep[0];
+			continue;
+		}
+		if ((c._ability & Taunt) != 0) ++skillRep[1];
+		if ((c._ability & Trample) != 0) ++skillRep[2];
+		if ((c._ability & Flying) != 0) ++skillRep[3];
 	}
+	for (int i = 0; i < costDst.size(); ++i)
+		std::cout <<"Cost->"<< i << " = " << costDst[i] << std::endl;
 
 	Visualiser::GenGraph(skillRep, 5);
 	Visualiser::GenGraph(costDst, 6);

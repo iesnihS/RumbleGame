@@ -2,19 +2,6 @@
 #include <sstream>
 using json = nlohmann::json;
 
-Visualiser::Visualiser()
-{
-
-}
-
-void Visualiser::GenPieChart(const std::vector<double>& x, int gameIdx)
-{
-	auto f = matplot::figure(true);
-	auto ax = f->current_axes();
-	auto p = ax->pie(x);
-	matplot::save(GetFileName("Game", gameIdx));
-}
-
 static std::string GetNameFromCtx(int ctx)
 {
 	switch (ctx)
@@ -58,53 +45,77 @@ static std::string GetColorFromCtx(int ctx)
 	case 6: return "blue";
 	}
 }
-
-void Visualiser::GenGraph(const std::vector<double>& x, int ctx)
+static std::vector < std::string> GetLabelsWithValues(const std::vector<double>& data)
 {
-	std::fstream data("Data/data.json");
-	if (!data.good())
+	const std::vector<std::string> labels = { "Vanilla", "Taunt", "Trample", "Flying" };
+	std::vector<std::string> res;
+	for (int i = 0; i < data.size(); ++i)
 	{
-		std::cout << "Pas de data, pas de graph" << std::endl;
-		return;
+		std::ostringstream lss;
+		lss << labels[i] << " (" << (int)((data[i]/Deck::NB_CARDS)*100) << "%)";
+		res.push_back(lss.str());
 	}
-	json j = json::parse(data);
-	int idx = j["GenIdx"].template get<int>();
-
-	// Quiet draw.
-	auto f = matplot::figure(true);
-	f->size(512, 512);
-	auto ax = f->current_axes();
-	ax->ylabel(GetLabelFromCtx(ctx, false));
-	ax->xlabel(GetLabelFromCtx(ctx, true));
-
-	std::string title = GetNameFromCtx(ctx);
-	std::string color = GetColorFromCtx(ctx);
-	// Histogram.
-	if (ctx > 4)
-	{
-		auto h = ax->hist(x);
-		h->display_name(title);
-		h->face_color("r");
-		h->edge_color(color);
-	}
-	else
-	{
-		auto p = ax->plot(x);
-		p->display_name(title);
-		p->color(color);
-	}
-
-	if(ctx == 0) matplot::yrange({ 0, 100 });
-	matplot::save(GetFileName(title, ++idx));
-	j["GenIdx"] = idx;
-	data << j;
+	return res;
 }
-
-std::string Visualiser::GetFileName(std::string name, int idx)
+static std::string GetFileName(std::string name, int idx)
 {
 	std::ostringstream oss;
 	oss << "Metrics/" << name << "_" << idx << ".jpg";
 	return oss.str();
 }
+
+void Visualiser::GenGraph(const std::vector<double>& data, int ctx)
+{
+	std::fstream dataFile("Data/data.json");
+	if (!dataFile.good())
+	{
+		std::cout << "Pas de data, pas de graph" << std::endl;
+		return;
+	}
+	json j = json::parse(dataFile);
+
+	int idx = j["GenIdx"].template get<int>();
+	std::string title = GetNameFromCtx(ctx);
+	std::string color = GetColorFromCtx(ctx);
+
+	// Quiet draw.
+	auto f = matplot::figure(true);
+	f->size(512, 512);
+	auto ax = f->current_axes();
+	if (ctx != 5)
+	{
+		ax->ylabel(GetLabelFromCtx(ctx, false));
+		ax->xlabel(GetLabelFromCtx(ctx, true));
+	}
+
+	// Line plot.
+	if (ctx < 5)
+	{
+		auto l = ax->plot(data);
+		l->display_name(title);
+		l->color(color);
+	}
+	else
+	{
+		// Histogram.
+		if (ctx == 6)
+		{
+			auto b = ax->bar(data);
+			b->display_name(title);
+		}
+		// Pie chart.
+		else
+		{
+			auto p = ax->pie(data, GetLabelsWithValues(data));
+			p->display_name(title);
+		}
+	}
+
+	if(ctx == 0) matplot::yrange({ 0, 100 });
+	matplot::save(GetFileName(title, ++idx));
+	if (ctx == 5) matplot::show();
+}
+
+
 
 

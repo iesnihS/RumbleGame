@@ -48,10 +48,35 @@ void Player::PlayCard(uint32_t iHand)
 
 void Player::AttackPlayer(Player* player)
 {
+	std::vector<Card*> tauntCards;
+	for (Card c : player->_board) if (c.HasAbility(Taunt)) tauntCards.emplace_back(&c);
+
 	for(uint32_t i = 0; i < _board.size(); i++)
 	{
-		player->_pv -= _board[i]._atk;
+		Card currentCard = _board[i];
+		// No Taunts ahead, every attack against enemy player.
+		if (tauntCards.size() == 0)
+		{
+			player->_pv -= currentCard._atk;
+			continue;
+		}
+
+		bool blocked = false;
+		for (Card* c : tauntCards)
+		{
+			if (c->dead) continue;
+			if (!currentCard.HasAbility(Flying) || 
+				(currentCard.HasAbility(Flying) && c->HasAbility(Flying)))
+			{
+				player->_pv -= currentCard.Fight(c);
+				blocked = true;
+				break;
+			}
+		}
+		if (!blocked) player->_pv -= currentCard._atk;
 	}
+	RemoveDeadCards();
+	player->RemoveDeadCards();
 }
 
 void Player::PrintHand()
@@ -69,4 +94,11 @@ void Player::Reset()
 	_currentMana = 1;
 	_hand.clear();
 	_board.clear();
+}
+
+void Player::RemoveDeadCards()
+{
+	std::vector<Card>::iterator boardIt = std::remove_if(_board.begin(), _board.end(),
+		[](auto c) { return c.dead;});
+	_board.erase(boardIt, _board.end());
 }
